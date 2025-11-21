@@ -1,0 +1,282 @@
+ /* Page Container */
+.pageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* Program Card */
+.programCard {
+  display: flex;
+  align-items: stretch;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 40px 0;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid #dcdcdc;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+/* Theme Colors (same soft pastel as screenshot) */
+.themeGreen {
+  background: #e8f7e8;
+  border-left-color: #a3d89c;
+}
+
+.themeBlue {
+  background: #e8f2ff;
+  border-left-color: #8db8ff;
+}
+
+.themeOrange {
+  background: #fff1e6;
+  border-left-color: #ffb178;
+}
+
+.themePurple {
+  background: #f2e8ff;
+  border-left-color: #c5a8ff;
+}
+
+.themePink {
+  background: #ffe8f2;
+  border-left-color: #ff9fc8;
+}
+
+/* Content Section */
+.programContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header (Title + Description + Button) */
+.programHeader {
+  margin-bottom: 10px;
+}
+
+.programTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.programText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Apply Button */
+.applyButton {
+  margin-top: 12px;
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.applyButton:hover {
+  background: #005fcc;
+}
+
+/* List Sections (Curriculum & Outcomes) */
+.programListsContainer {
+  margin-top: 18px;
+}
+
+.listSection {
+  margin-bottom: 18px;
+}
+
+.listTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.listText {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Image Section */
+.programImageContainer {
+  position: relative;
+  width: 280px;
+  min-width: 280px;
+}
+
+.programImage {
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Red Pin Circle */
+.redPin {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  background: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 10;
+}
+
+/* Floating Icon */
+.programIconFloating {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  z-index: 12;
+}
+
+.iconImage {
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .programCard {
+    flex-direction: column;
+  }
+
+  .programImageContainer {
+    width: 100%;
+  }
+
+  .programImage {
+    height: 180px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* --- Daily Schedule Section --- */
+.dailyScheduleSection {
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: #f8f8f8; /* Light background to separate it */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.scheduleTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* --- Schedule Grid Layout --- */
+.scheduleGrid {
+    display: grid;
+    /* Two columns: one narrow for time, one flexible for activity */
+    grid-template-columns: 1fr;
+    gap: 15px; /* Vertical spacing between items */
+}
+
+/* --- Individual Schedule Item Styling --- */
+.scheduleItem {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border-left: 5px solid var(--theme-purple, #6a1b9a); /* Use a program theme color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.scheduleItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleTime {
+    /* Fixed width or strong emphasis for time slot */
+    min-width: 160px;
+    font-weight: 700;
+    color: #555;
+    font-size: 1.1rem;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+}
+
+.scheduleActivity {
+    flex-grow: 1;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* --- Media Query for Larger Screens --- */
+@media (min-width: 768px) {
+    .scheduleGrid {
+        /* On desktop, use two columns for the schedule items */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 40px;
+    }
+    
+    .scheduleItem {
+        /* Reset to standard flex within the new 2-column grid */
+        flex-direction: row;
+        border-left-width: 6px;
+    }
+
+    /* Override to ensure time is left-aligned in the item */
+    .scheduleTime {
+        text-align: left;
+    }
+}
+
+/* --- Media Query for smaller screens (adjust item stacking) --- */
+@media (max-width: 600px) {
+    .scheduleItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .scheduleTime {
+        margin-right: 0;
+        margin-bottom: 5px;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px dashed #eee;
+        width: 100%;
+    }
+}

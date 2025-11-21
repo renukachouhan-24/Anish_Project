@@ -1,0 +1,608 @@
+ 
+:root {
+    --white-bg: #fcf8f2;
+    --text-dark: #333333;
+    --title-gold: #ff9100; 
+    --subtitle-blue: #004d99; 
+    --accent-orange: #ff9100; 
+    --author-color: #001c4f;
+    --author-title-color: #034d1f;
+}
+
+
+.modernHeroSection {
+    width: 100%;
+    min-height: 85vh; 
+    display: flex;
+    align-items: center; 
+    overflow: hidden;
+    position: relative;
+    background-color: var(--white-bg);
+    color: var(--text-dark);
+    padding: 0;
+}
+
+.heroContent {
+    
+    flex: 0 0 42%; 
+    max-width: 42%; 
+    padding: 60px 40px 60px 60px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modernTitle {
+   
+    font-family: 'Playfair Display', Georgia, serif; 
+    font-size: clamp(3rem, 6vw, 4.5rem); 
+    font-weight: 700;
+   
+    line-height:1.7rem ; 
+    color: var(--title-gold);
+    margin-bottom: 0; 
+    padding-bottom: 0;
+}
+
+
+.modernSubtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem); 
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+   
+    margin: 30px 0; 
+}
+
+
+.modernAuthorInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.modernAuthorImage {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid rgb(1, 93, 1); 
+    box-shadow: 0 0 0 1px #ddd; 
+}
+
+.modernAuthorName {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--author-color);
+    line-height: 1.2rem;
+}
+
+.modernAuthorTitle {
+    font-size: 1rem;
+    color: var(--author-title-color); 
+    font-weight: 400;
+}
+ 
+.learnMoreButton {
+    background-color: var(--accent-orange); 
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 25px; 
+    
+}
+
+ 
+.modernHeroImageContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+ 
+    width: 55%; 
+    height: 100%; 
+    overflow: hidden;
+    
+    
+    background-color: white; 
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1); 
+}
+
+.modernHeroImage {
+    width: calc(100% - 10px); 
+    height: calc(100% - 0px);
+    object-fit: cover; 
+    position: absolute;
+      
+
+    
+}
+
+.modernTitleBlue {
+     
+    color: var(--subtitle-blue); 
+    font-family: 'Playfair Display', Georgia, serif; 
+    font-size: clamp(3rem, 6vw, 4.5rem); 
+    font-weight: 700;
+    line-height: 1.05; 
+    margin-bottom: 0; 
+    padding-bottom: 0;
+}
+
+
+:root {
+ 
+    --v-m-background-light: #f4f8ff; 
+    --v-m-text-dark: #333333;
+    --v-m-header-blue: #003674; 
+}
+
+
+.missionVisionSection {
+    width: 100%;
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+
+.topTextBlock {
+    width: 100%;
+    background-color: var(--v-m-background-light); 
+    padding: 30px 50px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.topTextBlock p {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--v-m-text-dark);
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+}
+
+
+.missionVisionCard {
+    background-color: var(--v-m-background-light); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cardTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--v-m-header-blue);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.cardText {
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.6;
+    color: var(--v-m-text-dark);
+}
+
+
+@media (max-width: 900px) {
+    .missionVisionSection {
+        padding: 0 20px;
+    }
+    .cardsContainer {
+        
+        grid-template-columns: 1fr;
+    }
+} 
+
+
+
+
+
+/* --- NEW: Mission/Vision Colors --- */
+:root {
+    /* ... (Keep existing colors) ... */
+    --v-m-background-light: #f4f8ff; /* Very light blue/off-white background */
+    --v-m-text-dark: #333333;
+    --v-m-header-blue: #112B68; /* The deep blue for VISION/MISSION headers */
+}
+
+/* --- Mission/Vision Layout Section --- */
+.missionVisionSection {
+    width: 100%;
+    max-width: 1400px;
+    /* Reduced margin to bring it close to the hero section */
+    margin: 40px auto 60px auto; 
+    padding: 0 0px;
+    box-sizing: border-box;
+}
+
+/* --- Top Paragraph Block --- */
+.topTextBlock {
+    width: 100%;
+    /* Use the light blue background shown in the screenshot */
+    background-color: var(--v-m-background-light); 
+    /* padding: 30px 50px; */
+    border-radius: 8px;
+    margin-bottom: 30px; /* Reduced margin */
+}
+
+.topTextBlock p {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--v-m-text-dark);
+}
+
+/* --- Cards Container (Two Columns) --- */
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+}
+
+ 
+.missionVisionCard {
+   
+    background-color: #f4f8ff;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);  
+    height: 100%;
+    box-sizing: border-box;
+ 
+}
+.missionVisionCard ,.cardTitle{
+padding: 0;
+}
+.cardTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #112B68;
+    
+    padding: 30px 20px;
+    letter-spacing: 1px;
+    background-color: #e7f1fd;
+    margin-top: 0;
+    
+
+}
+
+.cardText {
+  padding: 20px  30px 0;
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    line-height: 1.6;
+    color: var(--v-m-text-dark);
+}
+ 
+@media (max-width: 900px) {
+    .missionVisionSection {
+        padding: 0 20px;
+    }
+    .cardsContainer {
+        /* Stack cards vertically on smaller screens */
+        grid-template-columns: 1fr;
+    }
+    .topTextBlock {
+        padding: 20px 30px;
+    }
+}
+
+
+
+
+
+/* --- Founder Section Layout --- */
+.founderSection {
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 0px;
+    box-sizing: border-box;
+    background-color: #F4F8FF;
+}
+
+.founderContainer {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Aligns content to the top */
+    margin-bottom: 30px;
+}
+
+/* --- Left Side: Image Styling --- */
+.founderImageContainer {
+    flex-shrink: 0; /* Prevents image area from shrinking */
+    width: 250px; /* Fixed width for the image container */
+    height: 250px; /* Fixed height for the circular crop */
+    overflow: hidden;
+    position: relative;
+    
+    /* Creates the black circular image frame/crop */
+    border-radius: 0%; 
+    border: 5px solid black; 
+    
+    /* Use a clip-path for a smoother look or keep border-radius: 50% for simple circle */
+    /* If the image needs an asymmetrical crop like the screenshot, use clip-path: */
+    clip-path: circle(100% at 50% 50%); /* Simple circle */
+}
+
+.founderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Right Side: Text Styling --- */
+.founderInfo {
+    flex-grow: 1;
+    padding-top: 10px; /* Slight offset to align text with image top */
+}
+
+.founderNameTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #112b68;
+    margin-bottom: 5px;
+}
+
+.founderRole {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #7d3900;
+    margin-bottom: 25px;
+}
+
+.founderDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* --- Bottom Full-Width Text --- */
+.founderBottomText {
+    margin-top: 40px;
+    padding-left: 290px; /* Aligns text under the right column, matching image width + gap */
+}
+
+.founderBottomText p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .founderContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .founderImageContainer {
+        width: 180px;
+        height: 180px;
+    }
+    .founderBottomText {
+        padding-left: 0;
+        text-align: center;
+    }
+    .founderNameTitle {
+        font-size: 1.5rem;
+    }
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+/* --- NEW: Vision in Partnership Section Styles --- */
+:root {
+    /* ... existing colors ... */
+    --green-bg-dark:  #11338114; /* Dark green for the section background */
+    --gold-highlight: #ffc107; /* Gold for "NavGurukul" and Legacy Card background */
+    --star-icon-color: #ffcc00; /* Yellow for the star icon */
+    --legacy-heart-color: #f8f8f8; /* Light color for the heart icon */
+}
+
+.visionPartnershipSection {
+    background-color: var(--green-bg-dark); /* Dark green background */
+    padding: 80px 0;
+    color: #112b68;
+    position: relative;
+    overflow: hidden; /* Ensures rounded corners are visible */
+    border-radius: 12px; /* Slight overall rounded corners for the section */
+    max-width: 1400px; /* Optional: Constrain max width for entire section */
+    margin: 60px auto; /* Centering the whole section */
+}
+
+.visionPartnershipContent {
+    display: flex;
+    max-width: 1200px; /* Inner content width */
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 60px;
+}
+
+.visionPartnershipLeft {
+    flex: 2; /* Takes more space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+}
+
+.visionPartnershipRight {
+    flex: 1; /* Takes less space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 20px; /* Align image/card slightly lower */
+}
+
+.visionPartnershipTitle {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #112b68; /* Title is white */
+}
+
+.visionPartnershipText {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.navgurukulHighlight {
+    color: var(--gold-highlight); /* Gold color for NavGurukul */
+    font-weight: 600;
+}
+
+.highlightGreen {
+    color: var(--gold-highlight); /* Gold color for emphasized text in the second paragraph */
+    font-weight: 600;
+}
+ 
+
+.starIcon {
+    color: var(--star-icon-color); /* Yellow star icon */
+    flex-shrink: 0;
+}
+
+/* --- Right Column Styles (Image and Legacy Card) --- */
+.visionPartnershipImageContainer {
+    width: 130%;
+    border-radius: 8px; /* Rounded corners for the image container */
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.visionPartnershipImage {
+    width: 130%;
+    height: 100%;
+    display: block;
+}
+
+ 
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .visionPartnershipContent {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 30px;
+    }
+    .visionPartnershipRight {
+        align-items: center;
+        width: 80%; /* Constrain width for a better look on smaller screens */
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    .visionPartnershipImageContainer,
+    .legacyCard {
+        width: 100%; /* Take full width within its parent */
+    }
+    .visionPartnershipTitle {
+        text-align: center;
+    }
+    .visionPartnershipLeft {
+        align-items: center;
+        text-align: center;
+    }
+    .visionPartnershipText {
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .visionPartnershipSection {
+        padding: 60px 0;
+        margin: 40px auto;
+    }
+    .visionPartnershipContent {
+        padding: 0 20px;
+    }
+    .visionPartnershipRight {
+        width: 95%;
+    }
+    
+    .starIcon {
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+
+
+
+ 
+
+.pedagogySection {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    /* padding: 25px 40px 40px 40px;  */
+    box-sizing: border-box;
+     
+    background-color:  #f4f8ff; 
+    border-radius: 10px;
+    border: 1px solid var(--about-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.pedagogyTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    text-align: center;
+    background-color: #e7f1fd;
+    color:  #112B68;
+    /* margin-bottom: 25px; */
+    
+    padding: 40px; 
+      
+}
+.pedagogyText {
+  padding: 40px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color:  #112B68;
+    margin-bottom: 20px; 
+    white-space: normal; 
+}
+@media (max-width: 768px) {
+    .pedagogySection {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .pedagogyTitle {
+        font-size: 1.5rem;
+    }
+    .pedagogyText {
+        font-size: 1rem;
+    }
+}

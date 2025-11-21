@@ -1,0 +1,239 @@
+/* Variables for colors */
+:root {
+  --footer-bg: #424454; /* Dark background color (Primary) */
+  --footer-text: #ebebeb; /* Light gray text color */
+  --footer-heading: #ffffff; /* White heading color */
+  --footer-link-hover: #f0c330; /* Example yellow/accent hover color */
+  --footer-bottom-bg: #3c394a; /* Use the same color as main footer for the bottom bar for seamless blending */
+}
+body{
+  font-family: open-sans, sans-serif;
+}
+.footerWrapper {
+  position: relative;
+  background-color: var(--footer-bg);
+  overflow: hidden;
+  border-top-right-radius: 40%;
+}
+.footerWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background-color: var(--sfs-dark-grey-strip);
+  z-index: 1;
+}
+.footerWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: var(--sfs-accent-color);
+  z-index: 2;
+}
+.footer {
+  padding: 60px 0 0 0;
+  color: var(--footer-text);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+}
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+.logoSocialsColumn {
+  margin-bottom: 20px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.mainFooterLogo {
+  width: 140px;
+  height: 140px;
+  margin-right: 15px;
+  border-radius: 20px;
+  object-fit: contain;
+}
+.schoolName {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--footer-heading);
+  text-transform: uppercase;
+} 
+.socialsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between icons */
+  padding: 20px 0;
+     
+}
+
+.socialLink {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #000; /* black circle */
+  border-radius: 50%;
+  color: #fff; /* white icon */
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.socialLink:hover {
+  transform: translateY(-5px);
+  color: #000; /* change icon color */
+  background-color: #fff; /* white background on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+
+.linksHeading {
+  font-size: 1rem;
+  color: var(--footer-heading);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksList li {
+  margin-bottom: 8px;
+}
+
+.link {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: var(--footer-link-hover);
+}
+
+/* Contact Info */
+.contactInfo p {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Separator and Statement */
+.footerSeparator {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 30px 0;
+}
+
+.statementSection {
+  padding-bottom: 40px;
+}
+
+.statementHeading {
+  font-size: 1rem;
+  color: var(--footer-heading);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.statementText {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--footer-text);
+  max-width: 65%;
+}
+
+ 
+
+.footerBottomContent {
+  width: 100%;
+  background-color: var(--footer-bottom-bg);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright{
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  color: var(--footer-text);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+
+  .logoSocialsColumn {
+    grid-column: 1 / 2;
+    margin-bottom: 0;
+  }
+
+  .linksBlock:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+
+  .linksBlock:nth-child(2) {
+    grid-column: 1 / 2;
+  }
+
+  .contactColumn {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+  }
+
+  .statementText {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contactColumn {
+    grid-row: auto;
+  }
+
+  .footerBottomContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
