@@ -25,9 +25,4 @@ dist-ssr
 
 
 
-src/assets/*
-src/assets/*.jpg
-src/assets/*.png
-src/assets/*.jpeg
-src/assets/*.mp4
-src/assets/*.mov
+
