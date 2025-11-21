@@ -1,26 +1,95 @@
-🌟 Anish Jadhav Memorial Foundation (AJMF) Website Frontend 
-🌟📝 Project OverviewThis is the official frontend repository for the Anish Jadhav Memorial Foundation (AJMF) Skilling Institute website.The website's primary goal is to showcase the foundation's mission—empowering underprivileged youth through skills training—and to highlight the facilities, residential programs (in collaboration with NavGurukul), and opportunities for partnership and donation.The design emphasizes a clean, modern, and trustworthy aesthetic, featuring key sections like an interactive campus tour, a "Day in the Life" routine, and transparent details on infrastructure and sustainability.
-🚀 Key FeaturesResponsive Design: Built using React and Tailwind CSS for optimal viewing on all devices.Visual Campus Tour: An attractive, interactive photo gallery with dynamic effects to showcase the campus.Holistic Experience: Detailed sections covering the daily residential life, including academics, meals, and cultural activities.Modern UI: Utilizes a professional color palette (Saffron, White, Dark Gray) and dynamic components (e.g., 3D hover cards, sticky capacity bar).Performance: Developed using modern JavaScript/React and bundled efficiently with Vite.🛠 Tech StackCategoryTechnologyFrameworkReactBuild ToolViteStylingTailwind CSSLanguageJavaScript (JSX)💻 Getting Started (Local Setup)Follow these steps to get the project up and running on your local machine for development and testing.PrerequisitesYou must have Node.js (which includes npm) installed on your system.1. Clone the RepositoryClone the project to your local machine and navigate into the project directory:Bashgit clone <YOUR_REPOSITORY_URL>
-cd AJMF_WEBSITE_FRONTEND
-2. Install DependenciesInstall all necessary project packages using npm:Bashnpm install
-# or, using Yarn:
+# Anish Jadhav Memorial Foundation (AJMF) — Website Frontend
+
+A clean, responsive frontend for the Anish Jadhav Memorial Foundation (AJMF) Skilling Institute website built with React and Tailwind CSS.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Run the Development Server](#run-the-development-server)
+- [Project Structure](#project-structure)
+- [Design & Customization](#design--customization)
+- [Contributing](#contributing)
+- [License & Contact](#license--contact)
+
+## Project Overview
+This repository contains the frontend source code for the AJMF website. The site showcases the foundation's mission, programs, campus, and other resources with an attractive, responsive UI.
+
+## Key Features
+- Responsive design using React + Tailwind CSS
+- Visual campus photo gallery with interactive effects
+- Reusable components (cards, headers, footers)
+- Clean routing for pages like Home, About, Campus, etc.
+
+## Getting Started
+
+### Prerequisites
+- Node.js (>= 16 recommended)
+- npm (or Yarn)
+- Git
+
+### Install
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/renukachouhan-24/Anish_Project.git
+cd Anish_Project/AJMF_WEBSITE_FRONTEND
+npm install
+# or with Yarn
 # yarn install
-3. Run the Development ServerStart the local development server:Bashnpm run dev
-# or, using Yarn:
+```
+
+### Run the Development Server
+Start the dev server (Vite):
+```bash
+npm run dev
+# or with Yarn
 # yarn dev
-The site will typically open in your browser at http://localhost:5173/ (or another port specified by Vite).
-📂 Project StructureThe project follows a standard modern React structure:AJMF_WEBSITE_FRONTEND/
+```
+The site will typically open at http://localhost:5173/ (or another port shown by Vite).
+
+## Project Structure
+A high-level view of the frontend layout:
+```
+AJMF_WEBSITE_FRONTEND/
 ├── public/
-│   ├── images/         # All static assets (AJMF.jpeg, classroom.jpeg, etc.)
+│   ├── images/         # Static assets (AJMF.jpeg, classroom.jpeg, ...)
 │   └── vite.svg
 ├── src/
 │   ├── components/
-│   │   ├── layout/     # Header, Footer components
-│   │   ├── reusable/   # SectionHeader, FeatureCard, RoutineStep, etc.
-│   │   └── specific/   # Components unique to a single page (e.g., Hero.jsx)
-│   ├── pages/          # Main route components (Campus.jsx, Home.jsx, About.jsx)
-│   ├── App.css         # Global styles (including Tailwind imports and custom classes)
-│   └── App.jsx         # Main application file where routes are defined
-└── ...
-🎨 Design and CustomizationThe core UI styling and custom classes are managed across src/App.css and Tailwind configuration.Colors: Custom CSS variables or classes (e.g., .text-ajmf-primary, .bg-ajmf-secondary) define the Saffron/Gray palette.Images: To change the gallery images, update the paths within the relevant CSS classes (e.g., background-image: url(...)) in your stylesheets. Ensure new images are placed in the /public/images folder.3D Hover: The dynamic 3D effects on elements like Feature Cards are controlled by Tailwind utility classes (e.g., [perspective:1000px], group-hover:rotate-x-3).
-🤝 ContributionWe welcome contributions to help improve the AJMF website and enhance its mission!Fork the repository.Create a new feature branch (git checkout -b feature/amazing-feature).Commit your changes (git commit -m 'Feat: Add an Amazing Feature').Push to the branch (git push origin feature/amazing-feature).Open a Pull Request.
+│   │   ├── layout/     # Header, Footer
+│   │   ├── reusable/   # SectionHeader, FeatureCard, RoutineStep, ...
+│   │   └── specific/   # Page-specific components (e.g., Hero.jsx)
+│   ├── pages/          # Main route components (Home.jsx, Campus.jsx, About.jsx)
+│   ├── App.css         # Global styles (Tailwind imports + custom classes)
+│   └── App.jsx         # Routes and app setup
+├── index.html
+└── package.json
+```
+
+## Design & Customization
+- Tailwind CSS controls most styling; custom classes and variables live in `src/App.css` and Tailwind config.
+- Example custom classes: `.text-ajmf-primary`, `.bg-ajmf-primary` (add these to your Tailwind config or CSS variables).
+
+## Contributing
+We welcome contributions!
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit changes with clear messages.
+4. Push to your fork and open a Pull Request.
+
+Please follow existing code style and add tests for new functionality where appropriate.
+
+## License & Contact
+- Add a LICENSE file to clarify the project's license (e.g., MIT).
+- Maintainer / contact: renukachouhan-24 (on GitHub)
+
+---
+
+Notes
+- I fixed formatting, corrected typos, organized content into clear sections, and added code blocks for commands so the README displays cleanly on the main page.
+- Next, if you want, I can: 1) open a PR that replaces the current README with this version, or 2) add a LICENSE file and GitHub templates. Tell me which you'd prefer and which branch to use (or I can create a branch for you).
