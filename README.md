@@ -8,7 +8,8 @@ cd AJMF_WEBSITE_FRONTEND
 3. Run the Development ServerStart the local development server:Bashnpm run dev
 # or, using Yarn:
 # yarn dev
-The site will typically open in your browser at http://localhost:5173/ (or another port specified by Vite).📂 Project StructureThe project follows a standard modern React structure:AJMF_WEBSITE_FRONTEND/
+The site will typically open in your browser at http://localhost:5173/ (or another port specified by Vite).
+📂 Project StructureThe project follows a standard modern React structure:AJMF_WEBSITE_FRONTEND/
 ├── public/
 │   ├── images/         # All static assets (AJMF.jpeg, classroom.jpeg, etc.)
 │   └── vite.svg
