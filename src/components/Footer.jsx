@@ -5,6 +5,11 @@ import styles from './Footer.module.css';
 import ajmfLogo from '../assets/AJMF.jpeg'; // मान लीजिए यह आपका लोगो है
 
 function Footer() {
+    const facebookUrl = "https://www.facebook.com/anishjmf/";
+    const instagramUrl = "https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/";
+    const linkedinUrl = "https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/";
+    const youtubeUrl = "https://www.youtube.com/watch?v=eHyWsRh03Tk";
+
     return (
         <div className={styles.footerWrapper}>
             <footer className={styles.footer}>
@@ -22,10 +27,42 @@ function Footer() {
 
                             {/* Social Icons */}
                             <div className={styles.socialsContainer}>
-                                <a href="#" className={styles.socialLink} aria-label="Facebook"><FaFacebookF /></a>
-                                <a href="#" className={styles.socialLink} aria-label="Instagram"><FaInstagram /></a>
-                                <a href="#" className={styles.socialLink} aria-label="LinkedIn"><FaLinkedinIn /></a>
-                                <a href="#" className={styles.socialLink} aria-label="YouTube"><FaYoutube /></a> {/* FaYoutube का उपयोग किया */}
+<a 
+                                    href={facebookUrl} 
+                                    target="_blank" // नया टैब खोलने के लिए जोड़ा गया
+                                    rel="noopener noreferrer" // सुरक्षा के लिए जोड़ा गया
+                                    className={styles.socialLink} 
+                                    aria-label="Facebook"
+                                >
+                                    <FaFacebookF />
+                                </a>
+                                <a 
+                                    href={instagramUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className={styles.socialLink} 
+                                    aria-label="Instagram"
+                                >
+                                    <FaInstagram />
+                                </a>
+                                <a 
+                                    href={linkedinUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className={styles.socialLink} 
+                                    aria-label="LinkedIn"
+                                >
+                                    <FaLinkedinIn />
+                                </a>
+                                <a 
+                                    href={youtubeUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className={styles.socialLink} 
+                                    aria-label="YouTube"
+                                >
+                                    <FaYoutube />
+                                </a> {/* FaYoutube का उपयोग किया */}
                             </div>
                         </div>
 
@@ -46,7 +83,7 @@ function Footer() {
                             <ul className={styles.linksList}>
                                 <li><a href="/donate" className={styles.link}>Donate</a></li>
                                 <li><a href="/volunteer" className={styles.link}>Volunteer</a></li>
-                                <li><a href="/faq" className={styles.link}>FAQs</a></li>
+                                <li><a href="/contact" className={styles.link}>FAQs</a></li>
                             </ul>
                         </div>
 
@@ -54,9 +91,9 @@ function Footer() {
                         <div className={styles.contactColumn}>
                             <h4 className={styles.linksHeading}>CONTACT</h4>
                             <div className={styles.contactInfo}>
-                                <p>Pune, Maharashtra, India</p>
+                                <p>Gharkul Society, Pathare Wasti, Lohegaon, Pune, Maharashtra, India</p>
                                 <p>Pin Code: 411047</p>
-                                <p className={styles.contactPhone}>+91 12345 67890</p>
+                                <p className={styles.contactPhone}>+91 9906155699 / 9067330833</p>
                                 <p className={styles.contactEmail}>info@ajmf.org</p>
                             </div>
                         </div>
