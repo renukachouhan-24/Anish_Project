@@ -2,12 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
     FaBuilding, FaChalkboardTeacher, FaUtensils, FaDumbbell,
-    FaBookOpen, FaLaptop, FaSolarPanel
+    FaHeartbeat, FaWifi, FaBookOpen, FaLaptop, FaSolarPanel
 } from 'react-icons/fa';
 import styles from './CampusAndFacilities.module.css';
 import { trackSectionView, trackFacilityInteraction } from '../utils/analytics';
 import { usePageAnalytics, useScrollAnalytics } from '../utils/analyticsHooks';
-
 import womansDayImage from '../assets/womans-Day.jpg';
 import exercisePhoto from '../assets/Excercise 5.jpg';
 import hackathonsPhoto from '../assets/Programming Hackathon.jpeg';
