@@ -1,32 +1,34 @@
 /* --- 1. Main Navbar --- */
 .navbar {
-  background-color: #ffffff; /* White background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
   position: sticky;
   top: 0;
-  
   z-index: 50;
   width: 100%;
 }
 
 /* --- 2. Container --- */
 .container {
-  max-width: 1280px;
-  
+  /* CHANGED: Increased width to fit all buttons in one row */
+  max-width: 98%; 
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5rem 1.5rem; /* Thoda chota navbar */
+  padding: 0.5rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* IMPORTANT: This forces everything to stay in one line */
+  flex-wrap: nowrap; 
 }
 
 /* --- 3. Logo --- */
 .logo {
   text-decoration: none;
+  flex-shrink: 0; /* Ensures logo doesn't shrink */
 }
 .logoImage {
-  height: 110px; /* Logo ki height */
+  height: 95px; /* Slightly smaller to save space */
   width: auto;
 }
 
@@ -34,63 +36,96 @@
 .linksContainer {
   display: flex;
   align-items: center;
-  gap: 2rem; /* Links ke beech space */
+  /* CHANGED: Reduced gap from 2rem to 1.2rem to make space for the new button */
+  gap: 1.2rem; 
 }
 
 /* --- 5. Main Nav Link --- */
 .navLink {
-  font-size: 1rem; /* Thoda chota text */
-  font-weight: 500;
+  font-size: 0.95rem; /* Slightly smaller text */
+  font-weight: 600;
   color: #333;
-  padding: 1.25rem 0; /* Upar-neeche padding se link bada dikhega */
+  padding: 1.25rem 0;
   border-bottom: 2px solid transparent;
   transition: all 0.2s;
   text-decoration: none;
   cursor: pointer;
   display: flex;
   align-items: center;
+  /* IMPORTANT: Prevents text like "Student Led Campus" from breaking into 2 lines */
+  white-space: nowrap; 
 }
 .navLink:hover {
-  color: #007bff; /* Accent color on hover */
+  color: #007bff;
 }
 .navLink.active {
   color: #007bff;
-  border-bottom: 2px solid #007bff; /* Active link underline */
+  border-bottom: 2px solid #007bff;
 }
 
-
-
-/* --- 8. Naye CTA Buttons --- */
+/* --- 8. CTA Buttons Container --- */
 .ctaContainer {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  /* Gap between the buttons */
+  gap: 0.8rem; 
+  /* Optional: Adds a small divider space between links and buttons */
+  margin-left: 1rem; 
 }
+
+/* Common styles to keep buttons clean */
 .ctaButtonPrimary,
 .ctaButtonSecondary {
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Compact text */
   font-weight: 600;
-  padding: 0.6rem 1.25rem;
+  padding: 0.6rem 1rem; /* Compact padding */
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s;
+  text-decoration: none;
+  white-space: nowrap; /* Keeps text on one line */
 }
-/* Yellow button (Morweb jaisa) */
+
+/* Yellow button */
 .ctaButtonPrimary {
   background-color: #fdb813;
   color: #111;
-  text-decoration: none;
 }
 .ctaButtonPrimary:hover {
   filter: brightness(0.9);
 }
-/* Blue button (Morweb jaisa) */
+
+/* Blue button */
 .ctaButtonSecondary {
   background-color: #00a0d2;
   color: white;
-  text-decoration: none;
 }
 .ctaButtonSecondary:hover {
   filter: brightness(0.9);
+}
+
+/* --- APPLY BUTTON (New) --- */
+.applyButton {
+  background-color: #ff9100; /* --accent-orange */
+  color: #fff;
+  font-size: 0.85rem; /* Matches other buttons */
+  font-weight: 700;
+  padding: 0.6rem 1.2rem; /* Balanced padding */
+  border-radius: 2rem; /* Pill shape */
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 145, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid #ff9100;
+  white-space: nowrap;
+  
+  /* CHANGED: Adds extra space before this specific button if you want a gap */
+  margin-left: 5px; 
+}
+
+.applyButton:hover {
+  background-color: #fff;
+  color: #ff9100;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 145, 0, 0.5);
 }
