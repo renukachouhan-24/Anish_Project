@@ -62,8 +62,8 @@ function Navbar() {
 
         <div className={styles.ctaContainer}>
           <NavLink
-            to="/involved" 
-            className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`} 
+            to="/involved"
+            className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`}
           >
             Get Involved
           </NavLink>
@@ -73,7 +73,14 @@ function Navbar() {
           >
             Success Stories
           </NavLink>
-          
+
+          <NavLink
+            to="/admissions"
+            className={`${styles.applyButton} ${styles.ctaNavLink}`}
+          >
+            Apply Now
+          </NavLink>
+
         </div>
 
       </div>
