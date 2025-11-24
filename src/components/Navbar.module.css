@@ -1,184 +1,131 @@
 /* --- 1. Main Navbar --- */
 .navbar {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    width: 100%;
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
 }
 
 /* --- 2. Container --- */
 .container {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  /* CHANGED: Increased width to fit all buttons in one row */
+  max-width: 98%; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* IMPORTANT: This forces everything to stay in one line */
+  flex-wrap: nowrap; 
 }
 
 /* --- 3. Logo --- */
 .logo {
-    text-decoration: none;
-    z-index: 60; 
+  text-decoration: none;
+  flex-shrink: 0; /* Ensures logo doesn't shrink */
 }
 .logoImage {
-    height: 70px; 
-    width: auto;
+  height: 95px; /* Slightly smaller to save space */
+  width: auto;
 }
 
 /* --- 4. Links Container (Desktop Setup) --- */
 .linksContainer {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  /* CHANGED: Reduced gap from 2rem to 1.2rem to make space for the new button */
+  gap: 1.2rem; 
 }
 
 /* --- 5. Main Nav Link (Desktop Setup) --- */
 .navLink {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-    padding: 1.25rem 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
-    text-decoration: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    white-space: nowrap; /* Prevent links from wrapping */
+  font-size: 0.95rem; /* Slightly smaller text */
+  font-weight: 600;
+  color: #333;
+  padding: 1.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* IMPORTANT: Prevents text like "Student Led Campus" from breaking into 2 lines */
+  white-space: nowrap; 
 }
 .navLink:hover {
-    color: #007bff;
+  color: #007bff;
 }
-.active { /* Used as .navLink.active */
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+.navLink.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
 }
 
-/* --- 6. Call to Action Buttons --- */
+/* --- 8. CTA Buttons Container --- */
 .ctaContainer {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    z-index: 60;
+  display: flex;
+  align-items: center;
+  /* Gap between the buttons */
+  gap: 0.8rem; 
+  /* Optional: Adds a small divider space between links and buttons */
+  margin-left: 1rem; 
 }
+
+/* Common styles to keep buttons clean */
 .ctaButtonPrimary,
 .ctaButtonSecondary {
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 0.6rem 1.25rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
+  font-size: 0.85rem; /* Compact text */
+  font-weight: 600;
+  padding: 0.6rem 1rem; /* Compact padding */
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  white-space: nowrap; /* Keeps text on one line */
 }
+
+/* Yellow button */
 .ctaButtonPrimary {
-    background-color: #fdb813;
-    color: #111;
+  background-color: #fdb813;
+  color: #111;
 }
 .ctaButtonPrimary:hover {
     filter: brightness(0.9);
 }
+
+/* Blue button */
 .ctaButtonSecondary {
-    background-color: #00a0d2;
-    color: white;
+  background-color: #00a0d2;
+  color: white;
 }
 .ctaButtonSecondary:hover {
-    filter: brightness(0.9);
+  filter: brightness(0.9);
 }
 
-/* --- 7. Hamburger Menu Toggle (Hidden on Desktop) --- */
-.menuToggle {
-    display: none; /* Hide by default */
-    cursor: pointer;
-    z-index: 60;
-    font-size: 1.5rem;
-    color: #333;
+/* --- APPLY BUTTON (New) --- */
+.applyButton {
+  background-color: #ff9100; /* --accent-orange */
+  color: #fff;
+  font-size: 0.85rem; /* Matches other buttons */
+  font-weight: 700;
+  padding: 0.6rem 1.2rem; /* Balanced padding */
+  border-radius: 2rem; /* Pill shape */
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 145, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid #ff9100;
+  white-space: nowrap;
+  
+  /* CHANGED: Adds extra space before this specific button if you want a gap */
+  margin-left: 5px; 
 }
-.mobileCta {
-    /* Used for the CTA buttons that appear inside the mobile menu */
-    display: none;
-}
 
-
-/* ---------------------------------------------------------------------- */
-/* ## 📱 Mobile & Tablet Responsiveness */
-/* ---------------------------------------------------------------------- */
-
-@media (max-width: 1024px) {
-    /* --- 1. Show the Hamburger Icon --- */
-    .menuToggle {
-        display: block; /* Show the hamburger icon */
-        order: 3;
-    }
-    
-    /* --- 2. Hide Desktop CTA Container --- */
-    .desktopCta {
-        display: none;
-    }
-    
-    /* --- 3. Mobile Links Container (The actual menu) --- */
-    .linksContainer {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        
-        /* Stack items vertically */
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 100px; /* Space below the fixed header/logo */
-        
-        background-color: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        z-index: 55;
-        
-        /* Hide menu by default off-screen */
-        transform: translateX(100%);
-        overflow-y: auto;
-    }
-
-    /* --- 4. State for OPEN Mobile Menu (Toggled by React) --- */
-    .linksContainer.isOpen { /* .isOpen is the class name from React */
-        transform: translateX(0);
-    }
-    
-    /* --- 5. Mobile Nav Links Styling --- */
-    .navLink {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-        padding: 1rem 0;
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
-        border-bottom: none; /* Remove desktop underline */
-    }
-    
-    .active {
-        border-bottom: 2px solid #007bff;
-        padding-bottom: 0.5rem;
-    }
-
-    /* --- 6. Mobile CTA Buttons inside the menu --- */
-    .mobileCta {
-        display: flex; /* Show CTAs inside the mobile menu */
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-top: 1.5rem;
-    }
-    
-    .mobileCta .ctaButtonPrimary,
-    .mobileCta .ctaButtonSecondary {
-        width: 200px;
-        text-align: center;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
+.applyButton:hover {
+  background-color: #fff;
+  color: #ff9100;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 145, 0, 0.5);
 }

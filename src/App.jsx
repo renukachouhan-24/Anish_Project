@@ -14,6 +14,7 @@ import GetInvolved from './components/GetInvolved';
 import ContactUs from './components/ContactUs';
 import StudentLedCampus from './components/StudentLedCampus';
 import SuccessStories from './components/SuccessStories';
+import Admissions from './components/Admissions';
 
 function App() {
   const location = useLocation();
@@ -49,6 +50,7 @@ function App() {
           {/* --- All Routes Go Here --- */}
 
           {/* Your Pages' Routes */}
+          <Route path="/admissions" element={<Admissions />} />
           <Route path="/" element={<Home />} />
           <Route path="/campus" element={<CampusAndFacilities />} />
           <Route path="/involved" element={<GetInvolved />} />

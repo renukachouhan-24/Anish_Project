@@ -66,40 +66,26 @@ function Navbar() {
           <NavLink to="/contact" className={getNavLinkClass} onClick={toggleMenu}>
             Contact Us
           </NavLink>
+        <div className={styles.ctaContainer}>
+          <NavLink
+            to="/involved"
+            className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`}
+          >
+            Get Involved
+          </NavLink>
+          <NavLink
+            to="/success-stories"
+            className={`${styles.ctaButtonSecondary} ${styles.ctaNavLink}`}
+          >
+            Success Stories
+          </NavLink>
 
-          {/* CTA Buttons (Desktop view ke liye separate, Mobile view ke liye yahan) */}
-          <div className={`${styles.ctaContainer} ${styles.mobileCta}`}>
-            <NavLink
-              to="/involved"
-              className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`}
-              onClick={toggleMenu}
-            >
-              Get Involved
-            </NavLink>
-            <NavLink
-              to="/success-stories"
-              className={`${styles.ctaButtonSecondary} ${styles.ctaNavLink}`}
-              onClick={toggleMenu}
-            >
-              Success Stories
-            </NavLink>
-          </div>
-        </div>
-        
-        {/* CTA Buttons (Desktop View - hidden on mobile via CSS) */}
-        <div className={`${styles.ctaContainer} ${styles.desktopCta}`}>
-            <NavLink
-                to="/involved"
-                className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`}
-            >
-              Get Involved
-            </NavLink>
-            <NavLink
-                to="/success-stories"
-                className={`${styles.ctaButtonSecondary} ${styles.ctaNavLink}`}
-            >
-              Success Stories
-            </NavLink>
+          <NavLink
+            to="/admissions"
+            className={`${styles.applyButton} ${styles.ctaNavLink}`}
+          >
+            Apply Now
+          </NavLink>
         </div>
 
       </div>

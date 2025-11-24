@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import {
   MapPin, Mail, Phone, Facebook, Twitter,
-  Instagram, Linkedin, Send, Map, ChevronDown
+  Instagram, Linkedin, Send, Map, ChevronDown, Youtube
 } from 'lucide-react';
 import styles from './ContactUs.module.css';
 
@@ -36,6 +36,11 @@ const faqAnswerVariant = {
 };
 
 function ContactUs() {
+  const facebookUrl = "https://www.facebook.com/anishjmf/";
+  const instagramUrl = "https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/";
+  const linkedinUrl = "https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/";
+  const youtubeUrl = "https://www.youtube.com/watch?v=eHyWsRh03Tk";
+
   const [openFaq, setOpenFaq] = useState(null);
   // const [mapLoaded, setMapLoaded] = useState(false); // New state for map
 
@@ -179,7 +184,7 @@ function ContactUs() {
               </div>
               <div>
                 <h3 className={`${styles.fontBody} ${styles.infoTitle}`}>Call Us</h3>
-                <p className={`${styles.fontBody} ${styles.infoText}`}>+91 123 456 7890</p>
+                <p className={`${styles.fontBody} ${styles.infoText}`}>+91 9906155699</p>
                 <p className={`${styles.fontBody} ${styles.infoSubtext}`}>Monday - Friday, 9:00 AM - 6:00 PM</p>
               </div>
             </motion.div>
@@ -188,19 +193,43 @@ function ContactUs() {
               <h3 className={`${styles.fontBody} ${styles.socialsBoxTitle}`}>Follow Us</h3>
               <div className={styles.socialsContainer}>
                 {/* Facebook */}
-                <a href="#" className={styles.socialLink} aria-label="Facebook">
+                <a 
+                    href={facebookUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.socialLink} 
+                    aria-label="Facebook"
+                >
                   <Facebook size={18} />
                 </a>
                 {/* Twitter (NEW) */}
-                <a href="#" className={styles.socialLink} aria-label="Twitter">
-                  <Twitter size={18} />
+                <a 
+                    href={youtubeUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.socialLink} 
+                    aria-label="Youtube"
+                >
+                  <Youtube size={18} />
                 </a>
                 {/* Instagram (NEW) */}
-                <a href="#" className={styles.socialLink} aria-label="Instagram">
+                <a 
+                    href={instagramUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.socialLink} 
+                    aria-label="Instagram"
+                >
                   <Instagram size={18} />
                 </a>
                 {/* LinkedIn (NEW) */}
-                <a href="#" className={styles.socialLink} aria-label="LinkedIn">
+                <a 
+                    href={linkedinUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.socialLink} 
+                    aria-label="LinkedIn"
+                >
                   <Linkedin size={18} />
                 </a>
               </div>
