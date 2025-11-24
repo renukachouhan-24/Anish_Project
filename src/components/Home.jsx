@@ -93,15 +93,25 @@ const HeroSection = () => {
                     </div>
                 </motion.div>
 
-                {/* === NEW: Learn More Button === */}
-                <motion.button
-                    className={styles.learnMoreButton}
-                    variants={buttonVariants}
-                    transition={{ delay: 0.8 }}
-                    onClick={() => navigate('/about')}
-                >
-                    Learn more
-                </motion.button>
+                <motion.div
+                    className={styles.modernButtonsContainer} // **यह नई क्लास है**
+                    variants={baseVariants}
+                    transition={{ delay: 0.8 }}
+                >
+                    <motion.button
+                        className={styles.learnMoreButton}
+                        //...
+                    >
+                        Learn more
+                    </motion.button>
+
+                    <motion.button
+                        className={styles.donateButton} 
+                        //...
+                    >
+                        Donate
+                    </motion.button>
+                </motion.div>
             </div>
 
             <div className={styles.modernHeroImageContainer}>

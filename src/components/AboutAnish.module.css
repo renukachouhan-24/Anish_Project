@@ -577,3 +577,38 @@
         z-index: 5;
     }
 }
+
+
+
+ /* --- Final Quarter Circle Styling --- */
+.quarterCircle {
+    position: absolute;
+    
+    /* Set size based on the screenshot */
+    width: 160px; 
+    height: 160px;
+    
+    background-color: #112B68; /* Dark blue color */
+    z-index: 2; /* Make this very high to guarantee it sits on top */
+    border-radius: 50%; /* Perfect circular shape */
+    
+ 
+    top: 300px; /* Use explicit pixels for certainty on large screens */
+    left: 150px; /* Positioned near the left edge of the collage container */
+}
+
+/* --- Responsive Adjustment --- */
+@media (max-width: 1024px) {
+    .quarterCircle {
+        width: 80px; 
+        height: 80px;
+        top: 200px; /* Adjusted pixel value for smaller screen heights */
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .quarterCircle {
+        display: none; 
+    }
+}

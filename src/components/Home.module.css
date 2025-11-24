@@ -1,4 +1,92 @@
- 
+/* --- Mobile View: Max Width 768px --- */
+@media (max-width:339) {
+    /* 1. .modernHeroSection (कंटेनर को स्टैक करना) */
+    .modernHeroSection {
+        flex-direction: row;
+        min-height: auto; 
+    }
+
+    /* 2. .modernHeroImageContainer (इमेज कंटेनर को सबसे ऊपर लाएँ) */
+    .modernHeroImageContainer {
+        position: static; /* Absolute हटाएँ */
+        width: 100%; 
+        height: auto; 
+        box-shadow: none; 
+        order: 1; /* इसे पहले आइटम के रूप में सेट करें (इमेज अब सबसे ऊपर) */
+    }
+
+    /* 3. .modernHeroImage (इमेज एलिमेंट) */
+    .modernHeroImage {
+        width: 50%; 
+        height: auto;
+        position: static; 
+        /* calc(100% - 10px) को 100% में बदलें */
+    }
+
+    /* 4. .heroContent (टेक्स्ट कंटेनर को इमेज के नीचे लाएँ) */
+    .heroContent {
+        flex: 1  50%; 
+        max-width: 50%;
+       
+        padding: 30px 20px 40px 20px; 
+        order: 1; /* इसे दूसरे आइटम के रूप में सेट करें (इमेज के नीचे) */
+    }
+
+    /* 5. Title & Subtitle (साइज़ एडजस्टमेंट) */
+    .modernTitle,
+    .modernTitleBlue {
+        font-size: 2.2rem; 
+        line-height: 1.1; 
+    }
+    .modernSubtitle {
+        margin: 20px 0;
+        font-size: 0.9rem;
+    }
+
+    /* 6. .modernAuthorInfo (फाउंडर info) */
+    .modernAuthorImage {
+        width: 60px; 
+        height: 60px;
+    }
+    .modernAuthorName {
+        font-size: 1.2rem;
+    }
+    .modernAuthorTitle {
+        font-size: 0.9rem;
+    }
+
+    /* 7. .modernButtonsContainer (बटनों को स्टैक करना) */
+    .modernButtonsContainer {
+        display: flex;
+        flex-direction: column; /* बटनों को ऊपर-नीचे (Stack) करें */
+        gap: 15px; 
+        width: 100%;
+        margin-top: 15px; 
+    }
+    
+    .learnMoreButton,
+    .donateButton { 
+        width: 100%; /* फुल चौड़ाई दें */
+        max-width: 100%; 
+        margin-top: 0; /* individual button margins हटाएँ */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
     --white-bg: #fcf8f2;
     --text-dark: #333333;
@@ -84,20 +172,41 @@
     font-weight: 400;
 }
  
-.learnMoreButton {
+.learnMoreButton  {
     background-color: var(--accent-orange); 
     color: white;
     font-size: 1.1rem;
     font-weight: 600;
-    padding: 12px 30px;
+    padding: 12px 25px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     width: 250px;
     margin-top: 25px; 
     
+    
 }
 
+/* --- Large Screen Button Container --- */
+.modernButtonsContainer {
+    display: flex; /* बटनों को अगल-बगल रखें */
+    gap: 20px;
+    margin-top: 25px; 
+}
+
+/* Donate बटन के लिए अलग स्टाइल (आपको इसे खुद परिभाषित करना होगा) */
+.donateButton {
+    background-color: var(--accent-orange); 
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    margin-top: 25px; 
+}
  
 .modernHeroImageContainer {
     position: absolute;
@@ -135,6 +244,15 @@
     margin-bottom: 0; 
     padding-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
 
 
 :root {

@@ -314,6 +314,11 @@ const AboutAnish = () => {
                             <MotionDiv className={styles.imageWrapper3} variants={cardVariants}>
                                 <img src={campusImg2} alt="Foundation Work 2" />
                             </MotionDiv>
+ 
+                        <MotionDiv className={styles.quarterCircle} variants={cardVariants} transition={{ delay: 0.7 }} />
+                        
+
+
                         </MotionDiv>
 
                     </div>

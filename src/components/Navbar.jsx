@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Bars for open, Times for close
+
 // CSS Module ko import karein
 import styles from './Navbar.module.css';
+
 // Logo import karein
 import ajmfLogo from '../assets/AJMF.jpeg';
 
 function Navbar() {
+  // State to track the mobile menu's open/closed status
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle function
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   // Active/Inactive class set karne ke liye function
   const getNavLinkClass = ({ isActive }) => {
@@ -19,61 +28,78 @@ function Navbar() {
       <div className={styles.container}>
 
         {/* Logo */}
-        <NavLink to="/" className={styles.logo}>
+        <NavLink to="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           {/* Logo Image */}
           <img src={ajmfLogo} alt="AJMF Logo" className={styles.logoImage} />
-          {/* Aap text bhi rakh sakti hain */}
-          {/* Anish Jadhav Memorial Foundation */}
         </NavLink>
 
-        {/* Navigation Links */}
-        <div className={styles.linksContainer}>
+        {/* Hamburger/Close Button (Mobile only) */}
+        <div className={styles.menuToggle} onClick={toggleMenu}>
+          {/* Show FaTimes (X) when open, FaBars (Hamburger) when closed */}
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
 
-          <NavLink to="/" className={getNavLinkClass} end>
+        {/* Navigation Links - Mobile visibility based on isOpen state */}
+        <div className={`${styles.linksContainer} ${isOpen ? styles.isOpen : ''}`}>
+
+          {/* Nav Links */}
+          <NavLink to="/" className={getNavLinkClass} end onClick={toggleMenu}>
             Home
           </NavLink>
 
-          <NavLink to="/about" className={getNavLinkClass}>
+          <NavLink to="/about" className={getNavLinkClass} onClick={toggleMenu}>
             About Anish
           </NavLink>
 
-          <NavLink
-            to="/campus"
-            className={getNavLinkClass}
-          >
+          <NavLink to="/campus" className={getNavLinkClass} onClick={toggleMenu}>
             Campus & Facilities
           </NavLink>
 
-          <NavLink
-            to="/programs"
-            className={getNavLinkClass}
-          >
+          <NavLink to="/programs" className={getNavLinkClass} onClick={toggleMenu}>
             Our Programs
           </NavLink>
 
-          <NavLink to="/student-campus" className={getNavLinkClass}>
+          <NavLink to="/student-campus" className={getNavLinkClass} onClick={toggleMenu}>
             Student Led Campus
           </NavLink>
 
-          <NavLink to="/contact" className={getNavLinkClass}>
+          <NavLink to="/contact" className={getNavLinkClass} onClick={toggleMenu}>
             Contact Us
           </NavLink>
-        </div>
 
-        <div className={styles.ctaContainer}>
-          <NavLink
-            to="/involved" 
-            className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`} 
-          >
-            Get Involved
-          </NavLink>
-          <NavLink
-            to="/success-stories"
-            className={`${styles.ctaButtonSecondary} ${styles.ctaNavLink}`}
-          >
-            Success Stories
-          </NavLink>
-          
+          {/* CTA Buttons (Desktop view ke liye separate, Mobile view ke liye yahan) */}
+          <div className={`${styles.ctaContainer} ${styles.mobileCta}`}>
+            <NavLink
+              to="/involved"
+              className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`}
+              onClick={toggleMenu}
+            >
+              Get Involved
+            </NavLink>
+            <NavLink
+              to="/success-stories"
+              className={`${styles.ctaButtonSecondary} ${styles.ctaNavLink}`}
+              onClick={toggleMenu}
+            >
+              Success Stories
+            </NavLink>
+          </div>
+        </div>
+        
+        {/* CTA Buttons (Desktop View - hidden on mobile via CSS) */}
+        <div className={`${styles.ctaContainer} ${styles.desktopCta}`}>
+            <NavLink
+                to="/involved"
+                className={`${styles.ctaButtonPrimary} ${styles.ctaNavLink}`}
+            >
+              Get Involved
+            </NavLink>
+            <NavLink
+                to="/success-stories"
+                className={`${styles.ctaButtonSecondary} ${styles.ctaNavLink}`}
+            >
+              Success Stories
+            </NavLink>
         </div>
 
       </div>
