@@ -26,12 +26,11 @@
   margin: 0 auto;
 }
 
-/* Banner Styles */
 .banner {
   position: relative;
   background-color: var(--color-primary);
   color: white;
-  padding: 4rem 1.5rem; 
+  padding: 4rem 1.5rem;
   text-align: center;
   margin: 4rem 0;
   overflow: hidden;
@@ -40,7 +39,7 @@
 .bannerTitle {
   position: relative;
   z-index: 10;
-  font-size: 3rem; 
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
@@ -52,9 +51,9 @@
 .bannerText {
   position: relative;
   z-index: 10;
-  font-size: 1.25rem; 
-  max-width: 48rem; 
-  margin: 0 auto 2.5rem auto; 
+  font-size: 1.25rem;
+  max-width: 48rem;
+  margin: 0 auto 2.5rem auto;
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -115,7 +114,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Section Header */
 .sectionHeader {
   text-align: center;
   margin-bottom: 4rem;
@@ -136,15 +134,12 @@
   line-height: 1.6;
 }
 
-/* Stories Container */
 .storiesContainer {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   gap: 2.5rem;
   margin-bottom: 5rem;
 }
 
-/* Story Card */
 .storyCard {
   display: flex;
   flex-direction: row;
@@ -169,7 +164,6 @@
   z-index: 2;
 }
 
-/* Story Image Section */
 .storyImageSection {
   position: relative;
   width: 280px;
@@ -221,7 +215,6 @@
   color: var(--color-secondary);
 }
 
-/* Story Content Section */
 .storyContentSection {
   flex: 1;
   padding: 2rem;
@@ -355,7 +348,6 @@
   color: white;
 }
 
-/* Call to Action */
 .ctaSection {
   text-align: center;
   background: linear-gradient(135deg, var(--color-background-dark), white);
@@ -422,85 +414,90 @@
   color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+  .storiesContainer {
+    /* 755px par hi single column grid shuru karein */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 25px; /* Thoda padding adjust kiya */
+  }
+
+  /* STORY CARD CHANGES: Change from horizontal (row) to vertical (column) layout */
+  .storyCard {
+    flex-direction: column; /* Row se Column mein badla */
+    min-height: auto;
+  }
+
+  .storyImageSection {
+    width: 100%; /* Image poori width legi */
+    /* Height ko responsive banayein */
+    height: 300px; /* Ya koi fixed height */
+    min-width: 100%; /* Fixed width hataya */
+  }
+
+  /* Content section ko flex: 1 se hata denge ya adjust karenge */
+  .storyContentSection {
+    padding: 1.5rem;
+  }
+  .bannerTitle {
+    font-size: 2.25rem;
+  }
+
+  .bannerText {
+    font-size: 1.125rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 790px) {
   .bannerTitle {
     font-size: 2rem;
   }
-  
+
   .bannerText {
     font-size: 1rem;
   }
-  
+
   .statsGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
-  .storiesContainer {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .storyCard {
-    flex-direction: column;
-    min-height: auto;
-  }
-  
-  .storyImageSection {
-    width: 100%;
-    height: 200px;
-  }
-  
-  .storyContentSection {
-    padding: 1.5rem;
-  }
-  
-  .storyTitle {
-    font-size: 1.2rem;
-  }
-  
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .ctaPrimary,
-  .ctaSecondary {
-    width: 100%;
-    max-width: 300px;
-  }
+
 }
 
 @media (max-width: 480px) {
   .section {
     padding: 3rem 1rem;
   }
-  
+
   .banner {
     padding: 3rem 1rem;
   }
-  
+
   .bannerTitle {
     font-size: 1.75rem;
   }
-  
+
   .storyContentSection {
     padding: 1rem;
   }
-  
+
   .storyImageSection {
-    height: 180px;
+    height: 200px;
   }
-  
+
   .storyTitle {
     font-size: 1.1rem;
   }
-  
+
   .ctaSection {
     padding: 3rem 1.5rem;
   }
-  
+
   .learnMoreBtn {
     width: 100%;
     justify-content: center;
