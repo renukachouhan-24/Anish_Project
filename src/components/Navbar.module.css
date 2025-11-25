@@ -1,48 +1,52 @@
-/* --- 1. Main Navbar --- */
 .navbar {
-  background-color: #ffffff; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 50;
   width: 100%;
 }
 
-/* --- 2. Container --- */
 .container {
-  /* CHANGED: Increased width to fit all buttons in one row */
-  max-width: 98%; 
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 98%;
+  margin: 0 auto;
   padding: 0.5rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* IMPORTANT: This forces everything to stay in one line */
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
+  position: relative; /* Hamburger button ke liye */
 }
 
-/* --- 3. Logo --- */
 .logo {
   text-decoration: none;
-  flex-shrink: 0; /* Ensures logo doesn't shrink */
+  flex-shrink: 0;
+  z-index: 100;
 }
 .logoImage {
-  height: 95px; /* Slightly smaller to save space */
+  height: 95px;
   width: auto;
 }
 
-/* --- 4. Links Container --- */
-.linksContainer {
+/* Desktop Links and CTAs - Default Visible */
+.linksContainerDesktop {
   display: flex;
   align-items: center;
-  /* CHANGED: Reduced gap from 2rem to 1.2rem to make space for the new button */
-  gap: 1.2rem; 
+  gap: 1.2rem;
+  flex-grow: 1;
+  justify-content: center;
 }
 
-/* --- 5. Main Nav Link --- */
+.ctaContainerDesktop {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
 .navLink {
-  font-size: 0.95rem; /* Slightly smaller text */
+  font-size: 0.95rem;
   font-weight: 600;
   color: #333;
   padding: 1.25rem 0;
@@ -52,8 +56,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  /* IMPORTANT: Prevents text like "Student Led Campus" from breaking into 2 lines */
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 .navLink:hover {
   color: #007bff;
@@ -63,31 +66,19 @@
   border-bottom: 2px solid #007bff;
 }
 
-/* --- 8. CTA Buttons Container --- */
-.ctaContainer {
-  display: flex;
-  align-items: center;
-  /* Gap between the buttons */
-  gap: 0.8rem; 
-  /* Optional: Adds a small divider space between links and buttons */
-  margin-left: 1rem; 
-}
-
-/* Common styles to keep buttons clean */
+/* CTA Buttons */
 .ctaButtonPrimary,
 .ctaButtonSecondary {
-  font-size: 0.85rem; /* Compact text */
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.6rem 1rem; /* Compact padding */
+  padding: 0.6rem 1rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
-  white-space: nowrap; /* Keeps text on one line */
+  white-space: nowrap;
 }
-
-/* Yellow button */
 .ctaButtonPrimary {
   background-color: #fdb813;
   color: #111;
@@ -95,8 +86,6 @@
 .ctaButtonPrimary:hover {
   filter: brightness(0.9);
 }
-
-/* Blue button */
 .ctaButtonSecondary {
   background-color: #00a0d2;
   color: white;
@@ -104,28 +93,207 @@
 .ctaButtonSecondary:hover {
   filter: brightness(0.9);
 }
-
-/* --- APPLY BUTTON (New) --- */
 .applyButton {
-  background-color: #ff9100; /* --accent-orange */
+  background-color: #ff9100;
   color: #fff;
-  font-size: 0.85rem; /* Matches other buttons */
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 0.6rem 1.2rem; /* Balanced padding */
-  border-radius: 2rem; /* Pill shape */
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(255, 145, 0, 0.3);
   transition: all 0.3s ease;
   border: 2px solid #ff9100;
   white-space: nowrap;
-  
-  /* CHANGED: Adds extra space before this specific button if you want a gap */
-  margin-left: 5px; 
+  margin-left: 5px;
 }
-
 .applyButton:hover {
   background-color: #fff;
   color: #ff9100;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(255, 145, 0, 0.5);
 }
+
+/* Hamburger/Close Button - Initially Hidden for Desktop */
+.menuToggle {
+  display: none; /* Default hide */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #111;
+  z-index: 100; /* Always on top */
+}
+
+/* Mobile Menu Overlay - Initially Hidden */
+.mobileMenuOverlay {
+  display: none; /* Default hide */
+}
+
+
+
+/* --- New Media Query for Intermediate Screens (e.g., Laptops) --- */
+@media (max-width: 1260px) {
+  
+  /* Container padding ko thoda badhayein takki edges tak na jaye */
+  .container {
+    padding: 0.5rem 1.5rem; 
+  }
+
+  /* Links ke beech ka gap kam karein */
+  .linksContainerDesktop {
+    gap: 0.8rem; /* Pehle 1.2rem tha */
+    margin-right: 0.5rem; /* Thoda space de CTAs se pehle */
+    justify-content: flex-start; /* Ya center ki jagah left align kar dein */
+  }
+
+  /* Links ka font size thoda chota karein */
+  .linksContainerDesktop .navLink {
+    font-size: 0.9rem; /* Pehle 0.95rem tha */
+    padding: 1rem 0; /* Padding adjust karein */
+  }
+  
+  /* CTA Container gap kam karein */
+  .ctaContainerDesktop {
+    gap: 0.5rem; /* Pehle 0.8rem tha */
+    margin-left: 0.5rem; /* Margin kam karein */
+  }
+  
+  /* CTA buttons ki padding aur font size kam karein */
+  .ctaButtonPrimary,
+  .ctaButtonSecondary,
+  .applyButton {
+    font-size: 0.8rem; /* Pehle 0.85rem tha */
+    padding: 0.5rem 0.8rem; /* Padding kam karein */
+  }
+
+  /* Logo size ko thoda kam karein agar zarurat ho */
+  .logoImage {
+    height: 80px; /* Pehle 95px tha */
+  }
+}
+/* ---------------------------------------------------------------- */
+/* --- MEDIA QUERY for Tablet/Mobile (max-width: 1024px) --- */
+/* ---------------------------------------------------------------- */
+@media (max-width: 1140px) {
+
+  .container {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Hide Desktop Links and CTAs on Mobile */
+  .linksContainerDesktop,
+  .ctaContainerDesktop {
+    display: none;
+  }
+
+  /* Show Hamburger Icon */
+  .menuToggle {
+    display: block; /* Show on mobile */
+    /* position: relative; ताकि X icon को position कर सकें */
+  }
+  
+  /* X icon position when menu is open */
+  .menuToggle.closeIcon {
+    position: fixed; /* Screen के relative position */
+    top: 20px;
+    right: 20px;
+    z-index: 150; /* Mobile menu overlay से ऊपर */
+    color: #111; /* X icon का color */
+  }
+
+  /* Mobile Logo adjustments */
+  .logoImage {
+    height: 60px; /* Logo size chota kiya */
+  }
+
+  /* Mobile Menu Overlay Styles */
+  .mobileMenuOverlay {
+    display: flex; /* Flexbox use kiya for content */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0; /* Right side se slide-in hoga */
+    width: min(70%, 300px); /* Screen ki 70% width, ya max 300px */
+    height: 100%;
+    background-color: #ffffff; /* White background */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Side shadow */
+    z-index: 100;
+    transform: translateX(100%); /* Initially hidden off-screen to the right */
+    transition: transform 0.3s ease-in-out;
+    padding: 20px 0; /* Top/Bottom padding */
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+
+  /* When Menu is Open */
+  .mobileMenuOverlay.menuOpen {
+    transform: translateX(0); /* Slide in from right */
+  }
+
+  /* Mobile Menu Header (Logo inside overlay) */
+  .mobileMenuHeader {
+    display: flex;
+    justify-content: flex-start; /* Logo left align */
+    align-items: center;
+    padding: 0 20px 20px; /* Padding for logo inside menu */
+    border-bottom: 1px solid #eee; /* Optional separator */
+    margin-bottom: 20px;
+  }
+
+  /* Mobile Nav Links Container */
+  .linksContainerMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Links left align */
+    width: 100%;
+    padding: 0 20px;
+    gap: 0;
+  }
+
+  /* Individual Mobile Nav Links */
+  .linksContainerMobile .navLink {
+    font-size: 1rem; /* Adjust font size for mobile */
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: left; /* Left align text */
+    border-bottom: 1px solid #eee;
+  }
+  .linksContainerMobile .navLink:last-of-type {
+    border-bottom: none;
+  }
+  .linksContainerMobile .navLink.active {
+    color: #007bff;
+    border-bottom: none;
+  }
+
+  /* Mobile CTA Container */
+  .ctaContainerMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align buttons */
+    width: 100%;
+    padding: 20px;
+    gap: 10px; /* Buttons ke beech gap */
+    margin-top: 20px;
+    border-top: 1px solid #eee; /* Optional separator */
+  }
+
+  /* Mobile CTA Buttons adjustments */
+  .ctaContainerMobile .ctaButtonPrimary,
+  .ctaContainerMobile .ctaButtonSecondary,
+  .ctaContainerMobile .applyButton {
+    width: 100%; /* Full width buttons */
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    margin-left: 0; /* Remove desktop margin */
+  }
+}
+
+/* --- Media Query for smaller phones (optional) --- */
+@media (max-width: 480px) {
+  .mobileMenuOverlay {
+    width: min(85%, 300px); /* Smaller width for very small screens */
+  }
+}
+
