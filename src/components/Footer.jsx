@@ -82,7 +82,6 @@ function Footer() {
                             <h4 className={styles.linksHeading}>GET INVOLVED</h4>
                             <ul className={styles.linksList}>
                                 <li><a href="/donate" className={styles.link}>Donate</a></li>
-                                <li><a href="/volunteer" className={styles.link}>Volunteer</a></li>
                                 <li><a href="/contact" className={styles.link}>FAQs</a></li>
                             </ul>
                         </div>

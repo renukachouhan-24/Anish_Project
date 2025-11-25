@@ -15,6 +15,7 @@ import ContactUs from './components/ContactUs';
 import StudentLedCampus from './components/StudentLedCampus';
 import SuccessStories from './components/SuccessStories';
 import Admissions from './components/Admissions';
+import Donate from './components/Donate';
 
 function App() {
   const location = useLocation();
@@ -67,6 +68,7 @@ function App() {
 
           {/* YAHAN BADLAAV KIYA GAYA HAI */}
           <Route path="/contact" element={<ContactUs />} /> 
+          <Route path="/donate" element={<Donate />} />
     
         </Routes>
       </main>

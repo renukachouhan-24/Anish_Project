@@ -1,0 +1,399 @@
+/* --- Theme Variables --- */
+.pageContainer {
+    --bg-cream: #fcf8f2;
+    --navy-blue: #001c4f;
+    --bright-blue: #004d99;
+    --gold-accent: #ff9100;
+    --white: #ffffff;
+    --text-dark: #222222;
+    --text-grey: #555555;
+    
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-cream);
+    min-height: 100vh;
+  }
+  
+  /* --- HERO SECTION (NEW: No Image, Gradient + Blur Text) --- */
+  .heroSection {
+    position: relative;
+    height: 400px; /* Fixed height for header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    /* Deep Navy Gradient */
+    background: radial-gradient(circle at center, #00286e 0%, var(--navy-blue) 70%);
+  }
+  
+  /* The Abstract Blurred Text Background */
+  .heroBackgroundText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* User can't click it */
+    z-index: 1;
+    user-select: none;
+  }
+  
+  .heroBackgroundText span {
+    font-size: 8rem; /* Giant text */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03); /* Very transparent */
+    line-height: 0.9;
+    letter-spacing: 10px;
+    filter: blur(3px); /* The Blur Effect */
+    white-space: nowrap;
+  }
+  
+  /* Content sits ON TOP of the blur text */
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .goldText {
+    color: var(--gold-accent);
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+  }
+  
+  /* --- Responsive Adjustments for Hero --- */
+  @media (max-width: 768px) {
+    .heroBackgroundText span {
+      font-size: 4rem; /* Smaller blur text on mobile */
+    }
+    .heroTitle {
+      font-size: 2.2rem;
+    }
+  }
+  
+  /* --- Main Content Layout --- */
+  .container {
+    max-width: 1100px;
+    margin: -60px auto 4rem; /* Pull up card effect */
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  /* --- Left Column: Info --- */
+  .infoColumn {
+    padding-top: 4rem;
+  }
+  
+  .impactBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 77, 153, 0.1);
+    color: var(--bright-blue);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionHeading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+  }
+  
+  .text {
+    color: var(--text-grey);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+  .taxNoteBox {
+    background-color: var(--white);
+    border-left: 4px solid var(--gold-accent);
+    padding: 1.5rem;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2.5rem;
+  }
+  
+  .taxTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 0.5rem;
+  }
+  
+  .taxText {
+    font-size: 0.95rem;
+    color: var(--text-grey);
+    line-height: 1.5;
+  }
+  
+  .emailHighlight {
+    color: var(--bright-blue);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  .subHeading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+  }
+  
+  .amountGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .amountCard {
+    background-color: var(--white);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .amountCard:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-accent);
+  }
+  
+  .amountValue {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--navy-blue);
+  }
+  
+  .amountLabel {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+    text-transform: uppercase;
+  }
+  
+  /* --- Right Column: Payment Card --- */
+  .donationCard {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 28, 79, 0.15);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .cardHeader {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .cardHeader h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .cardHeader p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .tabBtn {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+  
+  .activeTab {
+    background: var(--white);
+    color: var(--navy-blue);
+    border-bottom: 3px solid var(--gold-accent);
+  }
+  
+  .tabContent {
+    padding: 2rem;
+  }
+  
+  /* Detail Rows */
+  .detailRow {
+    margin-bottom: 1.2rem;
+  }
+  
+  .detailRow label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-grey);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .copyWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .copyWrapper span {
+    font-weight: 600;
+    color: var(--navy-blue);
+    font-family: monospace;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .copyWrapper button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-grey);
+    transition: color 0.2s;
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  
+  .copyWrapper button:hover {
+    color: var(--bright-blue);
+  }
+  
+  .staticValue {
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  /* QR Styles */
+  .qrContent {
+    text-align: center;
+  }
+  
+  .qrWrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border: 2px dashed var(--navy-blue);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .qrImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .qrInstruction {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .upiIdBox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f0f4f8;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: var(--navy-blue);
+  }
+  
+  .upiIdBox button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Card Footer */
+  .cardFooter {
+    background-color: #fff9ec;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #8a6d3b;
+    border-top: 1px solid #faebcc;
+  }
+  
+  .alertIcon {
+    min-width: 16px;
+    margin-top: 2px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 850px) {
+    .heroSection { height: 300px; }
+    .heroTitle { font-size: 2.2rem; }
+    
+    .container { margin: 0 auto; padding: 2rem 1.5rem; }
+    
+    .contentGrid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .infoColumn { padding-top: 0; order: 2; }
+    .paymentColumn { order: 1; }
+    
+    .amountGrid { grid-template-columns: repeat(2, 1fr); }
+    
+    .heroBackgroundText span {
+      font-size: 4rem;
+    }
+  }
