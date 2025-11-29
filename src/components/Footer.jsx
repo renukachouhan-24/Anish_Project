@@ -27,38 +27,38 @@ function Footer() {
 
                             {/* Social Icons */}
                             <div className={styles.socialsContainer}>
-<a 
-                                    href={facebookUrl} 
+                                <a
+                                    href={facebookUrl}
                                     target="_blank" // नया टैब खोलने के लिए जोड़ा गया
                                     rel="noopener noreferrer" // सुरक्षा के लिए जोड़ा गया
-                                    className={styles.socialLink} 
+                                    className={styles.socialLink}
                                     aria-label="Facebook"
                                 >
                                     <FaFacebookF />
                                 </a>
-                                <a 
-                                    href={instagramUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className={styles.socialLink} 
+                                <a
+                                    href={instagramUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.socialLink}
                                     aria-label="Instagram"
                                 >
                                     <FaInstagram />
                                 </a>
-                                <a 
-                                    href={linkedinUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className={styles.socialLink} 
+                                <a
+                                    href={linkedinUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.socialLink}
                                     aria-label="LinkedIn"
                                 >
                                     <FaLinkedinIn />
                                 </a>
-                                <a 
-                                    href={youtubeUrl} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className={styles.socialLink} 
+                                <a
+                                    href={youtubeUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.socialLink}
                                     aria-label="YouTube"
                                 >
                                     <FaYoutube />
@@ -90,7 +90,7 @@ function Footer() {
                         <div className={styles.contactColumn}>
                             <h4 className={styles.linksHeading}>CONTACT</h4>
                             <div className={styles.contactInfo}>
-                                <p>Gharkul Society, Pathare Wasti, Lohegaon, Pune, Maharashtra, India</p>
+                                <p>Anish Jadhav Memorial Foundation Gharkul Society, Pathare Wasti, Lohegaon, Pune, Maharashtra, India</p>
                                 <p>Pin Code: 411047</p>
                                 <p className={styles.contactPhone}>+91 9906155699 / 9067330833</p>
                                 <p className={styles.contactEmail}>info@ajmf.org</p>

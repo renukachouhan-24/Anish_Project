@@ -1,12 +1,11 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
 
 // Using your provided imports
-import campusImg25 from '../assets/campus25.jpeg';
-import campusImg4 from '../assets/campus10.jpeg'; // We'll use this for the main hero image
+import campusImg25 from '../assets/campus20.jpeg';
+import campusImg4 from '../assets/campus25.jpeg'; // We'll use this for the main hero image
 import FoundationImage from '../assets/AJMF_0324.jpg'; // We'll use this as the Author image placeholder
 
 // --- Animation Variants ---
@@ -20,15 +19,10 @@ const cardVariants = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
 };
 
-const buttonVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 100, delay: 1.5 } }
-};
 
 
 // --- Hero Section Component (UNCHANGED) ---
 const HeroSection = () => {
-    const navigate = useNavigate();
 
     return (
         <motion.section
@@ -93,15 +87,6 @@ const HeroSection = () => {
                     </div>
                 </motion.div>
 
-                {/* === NEW: Learn More Button === */}
-                <motion.button
-                    className={styles.learnMoreButton}
-                    variants={buttonVariants}
-                    transition={{ delay: 0.8 }}
-                    onClick={() => navigate('/about')}
-                >
-                    Learn more
-                </motion.button>
             </div>
 
             <div className={styles.modernHeroImageContainer}>
@@ -155,7 +140,7 @@ const MissionVisionSection = () => {
                 >
                     <h2 className={styles.cardTitle}>MISSION</h2>
                     <p className={styles.cardText}>
-                        AJMF aims to enhance
+                        Anish Jadhav Memorial Foundation aims to enhance
                         employment opportunities
                         and entrepreneurship through
                         various social and educational
@@ -207,7 +192,7 @@ const FounderSection = () => {
 
                     {/* Main Description */}
                     <p className={styles.founderDescription}>
-                        The Anish Jadhav Memorial Foundation was established by Brigadier Kishor Jadhav in loving memory of his son, Anish. In partnership with NavGurukul, we provide comprehensive residential education programs that equip underprivileged youth with the skills, knowledge, and opportunities they need to build successful careers and meaningful lives.
+                        The Anish Jadhav Memorial Foundation was established by his parents Brigadier Kishor Jadhav and Mrs. Neeta Jadhav in loving memory of his son, Anish. In partnership with NavGurukul, we provide comprehensive residential education programs that equip underprivileged youth with the skills, knowledge, and opportunities they need to build aspiration careers and meaningful lives.
                     </p>
                 </div>
             </div>
@@ -248,35 +233,34 @@ const PedagogySection = () => {
 
             </motion.h2>
 
-            <motion.p className={styles.pedagogyText} variants={baseVariants} transition={{ delay: 0.2 }}>
-
-                At our campus, we follow a unique, innovative, and effective learning approach that goes beyond traditional education.
-
-                Students not only gain new skills but also learn how to learn—an essential ability in a rapidly evolving world driven by
-
-                AI. Instead of full-time teachers, we emphasize self-learning, guided by a structured system of peer mentorship,
-
-                industry mentors, and facilitators who act as learning coaches to support and enhance the process.
-
-                Learning at Anish Jadhav Memorial Foundation is not limited to academics. Our student-driven campus provide
-
-                opportunities for real-world leadership and collaboration through the Student Council System, where learners actively
-
-                manage campus responsibilities. This experience helps them develop essential life skills such as communication,
-
-                negotiation, problem-solving, and teamwork, ensuring they are not just job-ready but also equipped to navigate life
-
-                with confidence and independence.
-
-            </motion.p>
+            <motion.div className={styles.pedagogyText} variants={baseVariants} transition={{ delay: 0.2 }}>
+                
+                {/* === UPDATED TEXT TO BULLET POINTS === */}
+                <p>At our campus, we follow a unique, innovative, and effective learning approach that goes beyond traditional education:</p>
+                <ul>
+                    <li>
+                        We emphasize Self-Learning, guided by a structured system of peer mentorship and industry mentors.
+                    </li>
+                    <li>
+                        Facilitators act as learning coaches to support and enhance the process, rather than traditional full-time teachers.
+                    </li>
+                    <li>
+                        The curriculum focuses on developing the essential ability of 'Learning How to Learn' in a world driven by AI.
+                    </li>
+                    <li>
+                        Our student-driven campus provides real-world leadership and collaboration opportunities through the Student Council System.
+                    </li>
+                    <li>
+                        The program develops essential life skills (communication, negotiation, problem-solving, and teamwork) to ensure learners are not just job-ready, but equipped for confidence and independence.
+                    </li>
+                </ul>
+            </motion.div>
 
         </motion.section>
 
     );
 
 };
-
-
 
 
 
