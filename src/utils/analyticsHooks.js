@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import { trackPageView, trackEvent } from './analytics';
 
-// Hook for tracking page analytics
+ 
 export const usePageAnalytics = (pageName) => {
   useEffect(() => {
     trackPageView(pageName);
   }, [pageName]);
 };
-
-// Hook for tracking scroll analytics
+ 
 export const useScrollAnalytics = (pageName) => {
   useEffect(() => {
     let scrollTimeout;

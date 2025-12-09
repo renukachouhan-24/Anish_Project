@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import styles from './Home.module.css';
 
 // Using your provided imports
-import campusImg25 from '../assets/campus20.jpeg';
+import campusImg25 from '../assets/partnershipSign.png';
 import campusImg4 from '../assets/campus25.jpeg'; // We'll use this for the main hero image
 import FoundationImage from '../assets/AJMF_0324.jpg'; // We'll use this as the Author image placeholder
 
@@ -284,7 +284,7 @@ const VisionInPartnershipSection = () => {
                     </motion.h2>
 
                     <motion.p className={styles.visionPartnershipText} variants={baseVariants} transition={{ delay: 0.1 }}>
-                        In partnership with <span className={styles.navgurukulHighlight}>NavGurukul</span>, a pioneering organization committed to providing residential
+                        In partnership with <span className={styles.navgurukulHighlight}> <span className={styles.navgurukul}>Nav</span>Gurukul</span>, a pioneering organization committed to providing residential
                         education to underprivileged youth, the foundation has created a comprehensive ecosystem of
                         learning and growth. The partnership ensures that students receive not just education, but a
                         complete transformation.
@@ -300,9 +300,9 @@ const VisionInPartnershipSection = () => {
 
                 </div>
 
-                {/* Right Column */}
+                
                 <div className={styles.visionPartnershipRight}>
-                    {/* Image Block */}
+                  
                     <motion.div className={styles.visionPartnershipImageContainer} variants={baseVariants} transition={{ delay: 0.4 }}>
                         <img src={campusImg25} alt="NavGurukul Students" className={styles.visionPartnershipImage} />
                     </motion.div>

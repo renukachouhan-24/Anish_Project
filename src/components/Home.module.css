@@ -7,6 +7,7 @@
     --accent-orange: #ff9100; 
     --author-color: #001c4f;
     --author-title-color: #034d1f;
+    font-size: 18px;
 }
 
 
@@ -412,7 +413,7 @@ padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap:50px;
     padding-top: 20px; 
 }
 
@@ -447,15 +448,15 @@ padding: 0;
 }
 
 .visionPartnershipImageContainer {
-    width: 130%;
+    width: 150%;
     border-radius: 8px; 
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 .visionPartnershipImage {
-    width: 130%;
-    height: 100%;
+    width: 100%;
+    height: 110%;
     display: block;
 }
 
@@ -555,4 +556,25 @@ padding: 0;
     .pedagogyText {
         font-size: 1rem;
     }
+}
+
+
+/* Existing styles */
+.navgurukulHighlight {
+    color: #1A3B7D; /* Keep the existing color/style */
+    font-weight: 600;
+    /* ADD THE SAMARKAN FONT HERE */
+    font-family: 'Samarkan', cursive; 
+    /* The 'cursive' fallback is typical for decorative fonts */
+}
+
+/* Add any other desired styling for the Samarkan text, e.g., slightly larger size */
+.navgurukulHighlight {
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Samarkan', cursive; 
+    font-size: clamp(1.4rem, 1.5vw, 1.3rem); /* Example: making it slightly bigger */
+}
+.navgurukul{
+    color: #e91e63;
 }

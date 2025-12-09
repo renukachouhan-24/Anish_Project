@@ -19,8 +19,7 @@ import Donate from './components/Donate';
 
 function App() {
   const location = useLocation();
-
-  // Track page views when route changes
+ 
   useEffect(() => {
     const getPageName = (pathname) => {
       const routes = {
@@ -40,7 +39,7 @@ function App() {
   }, [location]);
 
   return (
-    // 💡 UI CHANGE: Ensure the entire app has a dark background
+ 
     <div className="App flex flex-col min-h-screen bg-gray-900">
       <CustomCursor />
       <Navbar />
@@ -48,25 +47,25 @@ function App() {
 
       <main className="flex-grow">
         <Routes>
-          {/* --- All Routes Go Here --- */}
+           
 
-          {/* Your Pages' Routes */}
+         
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/" element={<Home />} />
           <Route path="/campus" element={<CampusAndFacilities />} />
           <Route path="/involved" element={<GetInvolved />} />
 
-          {/* Friend's Pages' Routes */}
+         
           <Route path="/about" element={<AboutAnish />} />
           <Route path="/programs" element={<OurPrograms />} />
 
-          {/* Student Led Campus Route */}
+      
           <Route path="/student-campus" element={<StudentLedCampus />} />
 
-          {/* Success Stories Route */}
+     
           <Route path="/success-stories" element={<SuccessStories />} />
 
-          {/* YAHAN BADLAAV KIYA GAYA HAI */}
+        
           <Route path="/contact" element={<ContactUs />} /> 
           <Route path="/donate" element={<Donate />} />
     
@@ -80,4 +79,4 @@ function App() {
 
 export default App;
 
-//some changes 
+ 

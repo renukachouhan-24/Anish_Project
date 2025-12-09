@@ -9,8 +9,8 @@ import styles from './OurPrograms.module.css';
 import { usePageAnalytics, useScrollAnalytics } from '../utils/analyticsHooks';
 
 // Images
-import imgCode from '../assets/IMG20231013232548.jpg'; 
-import imgBusiness from '../assets/IMG-20240111-WA0073.jpg';
+import imgCode from '../assets/sopImg.jpeg'; 
+import imgBusiness from '../assets/p.jpg';
 import imgSecondChance from '../assets/WhatsApp Image 2025-11-24 at 8.28.28 PM.jpeg';
 import imgCareer from '../assets/campus2.jpg'; 
 
