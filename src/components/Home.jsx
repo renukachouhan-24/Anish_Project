@@ -1,87 +1,5 @@
 
 
-
-
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import styles from './Home.module.css';
-
-
-// import campusImg4 from '../assets/campus25.jpeg';
-// import FoundationImage from '../assets/AJMF_0324.jpg';
-
-
-// const baseVariants = {
-//     hidden: { opacity: 0, y: 20 },
-//     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
-// };
-
-
-// const HeroSection = () => {
-//     return (
-//         <motion.section
-//             className={styles.modernHeroSection}
-//             initial="hidden"
-//             animate="visible"
-//             variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-//         >
-//             <div className={styles.heroContent}>
-//                 {/* Title text */}
-//                 <motion.h1 className={styles.modernTitle} variants={baseVariants}>
-//                     Anish Jadhav
-//                 </motion.h1>
-//                 <motion.h1 className={styles.modernTitleBlue} variants={baseVariants} transition={{ delay: 0.15 }}>
-//                     Memorial
-//                 </motion.h1>
-//                 <motion.h1 className={styles.modernTitle} variants={baseVariants} transition={{ delay: 0.3 }}>
-//                     Foundation
-//                 </motion.h1>
-
-//                 {/* Subtitle */}
-//                 <motion.p className={styles.modernSubtitle} variants={baseVariants} transition={{ delay: 0.45 }}>
-//                     TORCH BEARER FOR THE NEEDY
-//                 </motion.p>
-
-//                 {/* Founder Info & Image */}
-//                 <motion.div className={styles.modernAuthorInfo} variants={baseVariants} transition={{ delay: 0.6 }}>
-//                     <img
-//                         src={FoundationImage}
-//                         alt="Brigadier (Dr) Kishor Jadhav"
-//                         className={styles.modernAuthorImage}
-//                     />
-//                     <div className={styles.modernAuthorText}>
-//                         <p className={styles.modernAuthorName}>Brigadier (Dr) Kishor Jadhav, Ph D</p>
-//                         <p className={styles.modernAuthorTitle}>Founder of Anish Jadhav Memorial Foundation</p>
-//                     </div>
-//                 </motion.div>
-//             </div>
-
-//             {/* Right Side Big Image */}
-//             <div className={styles.modernHeroImageContainer}>
-//                 <img
-//                     src={campusImg4}
-//                     alt="Anish Jadhav Memorial Foundation Team"
-//                     className={styles.modernHeroImage}
-//                 />
-//             </div>
-//         </motion.section>
-//     );
-// };
-
-
-
-// const Home = () => {
-//     return (
-//         <div className={styles.pageContainer}>
-//             {/* Sirf Hero Section dikhega */}
-//             <HeroSection />
-//         </div>
-//     );
-// };
-
-// export default Home;
-
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, BookOpen } from 'lucide-react'; // Icons for beneficiaries
@@ -92,7 +10,6 @@ import campusImg4 from '../assets/campus25.jpeg';
 import FoundationImage from '../assets/AJMF_0324.jpg'; 
 import BrigadierJadhav from '../assets/campus.png'; // Using the image you used in QuoteSection
 
-// --- Animation Variants ---
 const baseVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
