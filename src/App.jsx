@@ -19,6 +19,7 @@ import Donate from './components/Donate';
 import PastInitiatives from './components/PastInitiatives';
 import Mission from './components/Mission';
 import DayAtCampus from './components/DayAtCampus';
+import Gallery from './components/Gallery';
 
 function App() {
   const location = useLocation();
@@ -33,7 +34,13 @@ function App() {
         '/programs': 'Our Programs',
         '/contact': 'Contact Us',
         '/success-stories': 'Success Stories',
-        '/student-campus': 'Student Led Campus'
+        '/student-campus': 'Student Led Campus',
+        '/mission': 'Mission & Trustee',
+        '/past-initiatives': 'Past Initiatives',
+        '/day-at-campus': 'A Day at Campus',
+        '/gallery': 'Gallery',
+        '/admissions': 'Admissions',
+        '/donate': 'Donate'
       };
       return routes[pathname] || 'Unknown Page';
     };
@@ -63,6 +70,7 @@ function App() {
           <Route path="/programs" element={<OurPrograms />} />
           <Route path="/past-initiatives" element={<PastInitiatives />} />
           <Route path="/day-at-campus" element={<DayAtCampus />} />
+          <Route path="/gallery" element={<Gallery />} />
 
       
           <Route path="/student-campus" element={<StudentLedCampus />} />
