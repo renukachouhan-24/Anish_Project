@@ -44,6 +44,7 @@ function Navbar() {
       path: '#',
       dropdown: [
         { label: 'Gallery', path: '/gallery' },
+        { label: 'Events & Activities', path: '/events' },
         { label: 'Campus & Facilities', path: '/campus' }, // Moved here as requested
         { label: 'Success Stories', path: '/success-stories' }
       ]
@@ -53,7 +54,8 @@ function Navbar() {
       path: '/contact',
       dropdown: [
         { label: 'Get Involved', path: '/involved' },
-        { label: 'Apply Now', path: '/admissions' }
+        { label: 'Apply Now', path: '/admissions' },
+        { label: 'Donate Now', path: '/donate' }
       ]
     }
   ];
