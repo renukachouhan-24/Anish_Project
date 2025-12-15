@@ -1,0 +1,218 @@
+:root {
+    --deep-blue: #112B68;
+    --gold: #ff9100;
+    --white-bg: #fcf8f2;
+    --light-blue: #f4f8ff;
+    --text-grey: #444;
+}
+
+.pageContainer {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white-bg);
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 80px;
+}
+
+/* --- Header --- */
+.headerSection {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.pageTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--deep-blue);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.pageSubtitle {
+    font-size: 1.2rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* --- Timeline Wrapper --- */
+.timelineWrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+/* The vertical line in the middle */
+.centralLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #e0e0e0;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+.scheduleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between items */
+    position: relative;
+    z-index: 1;
+}
+
+/* Timeline Item Layout */
+.timelineItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Time Badge (Circle in center) */
+.timeBadge {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background-color: var(--deep-blue);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 2px solid #fff;
+    z-index: 2;
+}
+
+/* Content Card Styling */
+.contentCard {
+    width: 42%; /* Slightly less than half */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.contentCard:hover {
+    transform: translateY(-5px);
+}
+
+/* Alternating Sides logic */
+.leftItem {
+    justify-content: flex-start;
+}
+.leftItem .contentCard {
+    margin-right: auto; /* Push to left */
+}
+
+.rightItem {
+    justify-content: flex-end;
+}
+.rightItem .contentCard {
+    margin-left: auto; /* Push to right */
+}
+
+/* Image inside Card */
+.imageContainer {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.activityImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.contentCard:hover .activityImage {
+    transform: scale(1.05);
+}
+
+/* Icon Overlay on Image */
+.iconOverlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Text inside Card */
+.textContainer {
+    padding: 20px;
+    background-color: var(--light-blue);
+}
+
+.activityTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--deep-blue);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.activityDesc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .centralLine {
+        left: 20px; /* Move line to left side */
+    }
+
+    .timelineItem {
+        justify-content: flex-start; /* Align all to left */
+        margin-left: 0;
+    }
+
+    .leftItem, .rightItem {
+        justify-content: flex-start;
+    }
+
+    .timeBadge {
+        position: relative;
+        left: 0;
+        transform: none;
+        margin-left: 0; /* Align with line */
+        margin-bottom: 15px;
+        width: 90px;
+    }
+
+    /* Wrap contents for mobile */
+    .timelineItem {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 40px; /* Space for the line */
+    }
+
+    .contentCard {
+        width: 100%; /* Full width cards */
+        margin: 0 !important;
+    }
+}
