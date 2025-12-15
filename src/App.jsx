@@ -16,6 +16,8 @@ import StudentLedCampus from './components/StudentLedCampus';
 import SuccessStories from './components/SuccessStories';
 import Admissions from './components/Admissions';
 import Donate from './components/Donate';
+import PastInitiatives from './components/PastInitiatives';
+import Mission from './components/Mission';
 
 function App() {
   const location = useLocation();
@@ -54,10 +56,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/campus" element={<CampusAndFacilities />} />
           <Route path="/involved" element={<GetInvolved />} />
-
-         
+          <Route path="/mission" element={<Mission />} />
+          
           <Route path="/about" element={<AboutAnish />} />
           <Route path="/programs" element={<OurPrograms />} />
+          <Route path="/past-initiatives" element={<PastInitiatives />} />
 
       
           <Route path="/student-campus" element={<StudentLedCampus />} />

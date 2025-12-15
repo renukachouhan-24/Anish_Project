@@ -145,7 +145,7 @@ function Navbar() {
       label: 'Home',
       path: '/',
       dropdown: [
-        { label: 'Mission', path: '/mission' } ,
+        { label: 'Mission & Trustee', path: '/mission' } ,
         { label: 'Past Initiatives', path: '/past-initiatives' } // You can create a /mission route later
       ]
     },
