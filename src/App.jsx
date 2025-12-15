@@ -18,6 +18,7 @@ import Admissions from './components/Admissions';
 import Donate from './components/Donate';
 import PastInitiatives from './components/PastInitiatives';
 import Mission from './components/Mission';
+import DayAtCampus from './components/DayAtCampus';
 
 function App() {
   const location = useLocation();
@@ -61,6 +62,7 @@ function App() {
           <Route path="/about" element={<AboutAnish />} />
           <Route path="/programs" element={<OurPrograms />} />
           <Route path="/past-initiatives" element={<PastInitiatives />} />
+          <Route path="/day-at-campus" element={<DayAtCampus />} />
 
       
           <Route path="/student-campus" element={<StudentLedCampus />} />
