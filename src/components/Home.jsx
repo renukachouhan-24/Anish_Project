@@ -1,14 +1,14 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
+ 
 import { motion } from 'framer-motion';
 import styles from './Home.module.css';
 
-// Using your provided imports
+ 
 import campusImg25 from '../assets/partnershipSign.png';
-import campusImg4 from '../assets/campus25.jpeg'; // We'll use this for the main hero image
-import FoundationImage from '../assets/AJMF_0324.jpg'; // We'll use this as the Author image placeholder
+import campusImg4 from '../assets/campus25.jpeg'; 
+import FoundationImage from '../assets/AJMF_0324.jpg';  
 
-// --- Animation Variants ---
+
 const baseVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
@@ -21,7 +21,7 @@ const cardVariants = {
 
 
 
-// --- Hero Section Component (UNCHANGED) ---
+
 const HeroSection = () => {
 
     return (
@@ -61,9 +61,8 @@ const HeroSection = () => {
                     Foundation
                 </motion.h1>
 
-                {/* === NEW: Subtitle (TORCH BEARER) === */}
                 <motion.p
-                    className={styles.modernSubtitle} // Deep Blue Styling
+                    className={styles.modernSubtitle} 
                     variants={baseVariants}
                     transition={{ delay: 0.45 }}
                 >
@@ -72,7 +71,7 @@ const HeroSection = () => {
 
 
                 <motion.div
-                    className={styles.modernAuthorInfo} // Founder Info Styling
+                    className={styles.modernAuthorInfo}
                     variants={baseVariants}
                     transition={{ delay: 0.6 }}
                 >
@@ -105,12 +104,10 @@ const MissionVisionSection = () => {
     return (
         <section className={styles.missionVisionSection}>
 
-            {/* The Top Text Block (motion.div) has been removed here */}
-
-            {/* Vison and Mission Cards Container */}
+           
             <div className={styles.cardsContainer}>
 
-                {/* Vision Card */}
+         
                 <motion.div
                     className={styles.missionVisionCard}
                     initial="hidden"
@@ -129,7 +126,7 @@ const MissionVisionSection = () => {
                     </p>
                 </motion.div>
 
-                {/* Mission Card */}
+              
                 <motion.div
                     className={styles.missionVisionCard}
                     initial="hidden"
@@ -153,12 +150,12 @@ const MissionVisionSection = () => {
     );
 };
 
-// --- Main Home Component (Updated to include MissionVisionSection) ---
+
 const Home = () => {
     return (
         <div className={styles.pageContainer}>
             <HeroSection />
-            {/* === ADDED: Mission and Vision Section === */}
+           
             <MissionVisionSection />
             <FounderSection />
             <PedagogySection />
@@ -168,15 +165,14 @@ const Home = () => {
     );
 };
 
-// --- NEW: Founder Information Component ---
-const FounderImage = FoundationImage; // Assuming this import holds the image of Brigadier Jadhav
+const FounderImage = FoundationImage; 
 
 const FounderSection = () => {
     return (
         <section className={styles.founderSection}>
             <div className={styles.founderContainer}>
 
-                {/* Left Side: Image */}
+               
                 <div className={styles.founderImageContainer}>
                     <img
                         src={FounderImage}
@@ -185,12 +181,12 @@ const FounderSection = () => {
                     />
                 </div>
 
-                {/* Right Side: Header and Short Info */}
+              
                 <div className={styles.founderInfo}>
                     <h2 className={styles.founderNameTitle}>Brigadier (Dr) Kishor Jadhav</h2>
                     <p className={styles.founderRole}>Founder of Anish Jadhav Memorial Foundation</p>
 
-                    {/* Main Description */}
+                
                     <p className={styles.founderDescription}>
                         The Anish Jadhav Memorial Foundation was established by his parents Brigadier Kishor Jadhav and Mrs. Neeta Jadhav in loving memory of his son, Anish. In partnership with NavGurukul, we provide comprehensive residential education programs that equip underprivileged youth with the skills, knowledge, and opportunities they need to build aspiration careers and meaningful lives.
                     </p>
@@ -204,7 +200,7 @@ const FounderSection = () => {
     );
 };
 
-// some changes
+
 
 
 
@@ -235,7 +231,7 @@ const PedagogySection = () => {
 
             <motion.div className={styles.pedagogyText} variants={baseVariants} transition={{ delay: 0.2 }}>
                 
-                {/* === UPDATED TEXT TO BULLET POINTS === */}
+            
                 <p>At our campus, we follow a unique, innovative, and effective learning approach that goes beyond traditional education:</p>
                 <ul>
                     <li>
@@ -266,7 +262,7 @@ const PedagogySection = () => {
 
 
 
-// --- NEW: Vision in Partnership Section Component ---
+
 const VisionInPartnershipSection = () => {
     return (
         <motion.section
@@ -277,7 +273,7 @@ const VisionInPartnershipSection = () => {
             viewport={{ once: true, amount: 0.1 }}
         >
             <div className={styles.visionPartnershipContent}>
-                {/* Left Column */}
+              
                 <div className={styles.visionPartnershipLeft}>
                     <motion.h2 className={styles.visionPartnershipTitle} variants={baseVariants}>
                         Our Vision in Partnership
