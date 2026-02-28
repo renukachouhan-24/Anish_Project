@@ -115,6 +115,9 @@
 .initiativeSection {
     padding: 80px 0;
     background-color: var(--light-blue-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .subHeadingBlue {
@@ -249,7 +252,10 @@
 /* Responsive */
 @media (max-width: 900px) {
     .splitLayout {
-        flex-direction: column;
+        /* flex-direction: column; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .imageGrid {
         width: 100%;

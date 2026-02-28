@@ -2,11 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './PastInitiatives.module.css';
 
-// You can import your generic placeholder image here if you have one, 
-// or just rely on the CSS placeholders I made below.
-// import placeholderImg from '../assets/placeholder.jpg'; 
 
-// --- Animation Variants (Same as Home.js) ---
 const baseVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
@@ -122,17 +118,17 @@ const PastInitiatives = () => {
                             variants={cardVariants}
                         >
                             {/* Placeholder 1 */}
-                            <div className={styles.imagePlaceholder}>
+                            {/* <div className={styles.imagePlaceholder}>
                                 <span>Classroom Training Photo</span>
-                            </div>
+                            </div> */}
                             {/* Placeholder 2 */}
-                            <div className={styles.imagePlaceholder}>
+                            {/* <div className={styles.imagePlaceholder}>
                                 <span>Certificate Distribution</span>
-                            </div>
+                            </div> */}
                             {/* Placeholder 3 */}
-                            <div className={styles.imagePlaceholderFull}>
+                            {/* <div className={styles.imagePlaceholderFull}>
                                 <span>Group Photo with Students</span>
-                            </div>
+                            </div> */}
                         </motion.div>
                     </div>
                 </div>
