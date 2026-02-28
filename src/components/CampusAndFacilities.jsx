@@ -401,7 +401,7 @@ function CampusAndFacilities() {
                     variants={containerVariants}
                 >
                     <MotionDiv variants={fadeInUp}>
-                        <h1 className={styles.heroTitle}>World-Class Infrastructure</h1>
+                        <h1 className={styles.heroTitle}>Infrastructure</h1>
                     </MotionDiv>
                     <MotionDiv variants={fadeInUp}>
                         <div className={styles.heroAccentLine}></div>

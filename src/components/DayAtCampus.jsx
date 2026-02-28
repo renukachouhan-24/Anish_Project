@@ -5,7 +5,17 @@ import styles from './DayAtCampus.module.css';
 
 // Images (Aap apni images yahan import karein)
 // Filhal maine placeholder use kiya hai
-import placeholderImg from '../assets/campus25.jpeg'; 
+import ExcerciseImg from '../assets/Excercise 5.jpg'; 
+import campusImg from '../assets/campus8.png';
+import academic1Img from '../assets/campus25.jpeg';
+import academic2Img from '../assets/campus17.jpeg';
+import englishImg from '../assets/English.jpeg';
+import breakfastImg from '../assets/4.jpg';
+import snacksImg from '../assets/3.jpg';
+import cultureImg from '../assets/culture.jpg';
+import selfstudyImg from '../assets/selfstudy.jpg';
+import dinnerImg from '../assets/dinner.jpeg';
+
 
 // --- Schedule Data ---
 const DAILY_SCHEDULE = [
@@ -14,72 +24,73 @@ const DAILY_SCHEDULE = [
         activity: 'Morning Exercise', 
         desc: 'Starting the day with physical wellness and yoga.',
         icon: Sun, 
-        image: placeholderImg 
+        image: ExcerciseImg 
     },
     { 
         time: '08:00 AM', 
         activity: 'Breakfast', 
         desc: 'Nutritious communal breakfast to fuel the day.',
         icon: Coffee, 
-        image: placeholderImg 
+        image: breakfastImg 
     },
     { 
         time: '09:00 AM', 
         activity: 'Academic Session 1', 
         desc: 'Deep dive into core technical concepts and coding.',
         icon: BookOpen, 
-        image: placeholderImg 
+        image: academic1Img 
     },
     { 
         time: '01:00 PM', 
         activity: 'Lunch Break', 
         desc: 'A healthy break to relax and recharge.',
         icon: Coffee, 
-        image: placeholderImg 
+        image:  campusImg 
     },
     { 
         time: '02:00 PM', 
         activity: 'Academic Session 2', 
         desc: 'Practical application, projects, and peer learning.',
         icon: Code, 
-        image: placeholderImg 
+        image: academic2Img 
     },
     { 
         time: '04:00 PM', 
         activity: 'English Activity', 
         desc: 'Communication skills and language development workshops.',
         icon: GraduationCap, 
-        image: placeholderImg 
+        image: englishImg 
     },
     { 
         time: '05:00 PM', 
         activity: 'Snacks', 
         desc: 'Evening tea and light snacks.',
         icon: Coffee, 
-        image: placeholderImg 
+        image: snacksImg 
     },
     { 
         time: '05:30 PM', 
         activity: 'Recreation', 
         desc: 'Sports, games, and team-building activities.',
         icon: Sun, 
-        image: placeholderImg 
+        image: cultureImg 
     },
     { 
         time: '06:30 PM', 
         activity: 'Self Study', 
         desc: 'Revision and working on individual assignments.',
         icon: BookOpen, 
-        image: placeholderImg 
+        image: selfstudyImg 
     },
     { 
         time: '08:30 PM', 
         activity: 'Dinner', 
         desc: 'Community dinner and winding down.',
         icon: Moon, 
-        image: placeholderImg 
+        image: dinnerImg 
     },
 ];
+
 
 // --- Animations ---
 const containerVariants = {
