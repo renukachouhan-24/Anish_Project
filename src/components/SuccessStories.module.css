@@ -431,7 +431,7 @@
   .storyImageSection {
     width: 100%; /* Image poori width legi */
     /* Height ko responsive banayein */
-    height: 300px; /* Ya koi fixed height */
+    height: 600px; /* Ya koi fixed height */
     min-width: 100%; /* Fixed width hataya */
   }
 
@@ -487,7 +487,7 @@
   }
 
   .storyImageSection {
-    height: 200px;
+    height: 400px;
   }
 
   .storyTitle {

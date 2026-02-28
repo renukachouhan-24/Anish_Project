@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; 
 import { 
-  Landmark, Smartphone, Copy, Check, 
-  ShieldCheck, AlertCircle 
+  Landmark, Copy, Check, 
+  ShieldCheck 
 } from 'lucide-react';
-import styles from './Donate.module.css';
-
-// QR Placeholder (Replace with actual QR image)
-import qrPlaceholder from '../assets/AJMF.jpeg'; 
+import styles from './Donate.module.css'; 
 
 // Animation Variants
 const fadeInUp = {
