@@ -72,7 +72,7 @@
       position: absolute;
       bottom: 3rem;
       right: 3rem;
-      background-color: #fff4f4;
+      background-color: var(--color-background-gray);
       padding: 2rem 2.5rem;
       border-radius: 1rem;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -343,17 +343,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* --- Root Color Variables (ensure these are defined) --- */
 :root {
     --primary-blue: #003674;
     --secondary-orange: #ff6a00;
@@ -362,13 +351,14 @@
     --border-purple: #c3b4e8; 
 }
 
-/* --- heroSection: Main Container Styling --- */
+
 .heroSection {
     position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 800%; */
+    min-height: 600px;
      
-    background-color: #ffffff; /* White background for the entire section */
+    background-color: #f0f0f0; /* White background for the entire section */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     /* Subtle purple border on the outer edge is often on the body/main page container */
      overflow: hidden;
@@ -391,7 +381,7 @@
     /* padding-top: 100px; */
     grid-template-columns: 1fr 1fr; /* Equal columns look closest to the screenshot */
     gap: 20px; 
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     
 }
 
@@ -423,11 +413,11 @@
     padding-top: 0;
 }
 
-/* --- heroImageCollage: Right side (Image Collage Container) --- */
+
 .heroImageCollage {
    position: relative;
     width: 100%;
-    height: 800px; /* Fixed height for the collage area */
+    height: 600px; 
     display: flex;
     justify-content: center;
     align-items: center;
