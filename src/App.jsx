@@ -20,6 +20,7 @@ import PastInitiatives from './components/PastInitiatives';
 import Mission from './components/Mission';
 import DayAtCampus from './components/DayAtCampus';
 import Gallery from './components/Gallery';
+import EventsAndActivities from './components/EventsAndActivities';
 
 function App() {
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
         '/past-initiatives': 'Past Initiatives',
         '/day-at-campus': 'A Day at Campus',
         '/gallery': 'Gallery',
+        '/events': 'Events & Activities',
         '/admissions': 'Admissions',
         '/donate': 'Donate'
       };
@@ -71,6 +73,7 @@ function App() {
           <Route path="/past-initiatives" element={<PastInitiatives />} />
           <Route path="/day-at-campus" element={<DayAtCampus />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/events" element={<EventsAndActivities />} />
 
       
           <Route path="/student-campus" element={<StudentLedCampus />} />

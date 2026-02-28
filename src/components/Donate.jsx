@@ -89,7 +89,7 @@ const Donate = () => {
                 Any amount donated to NavGurukul / AJMF is eligible for tax exemption under Section 80G of the Income Tax Act. 
                 <br/><br/>
                 <strong>Note:</strong> After making a donation, please email the transaction details to 
-                <span className={styles.emailHighlight}> info@ajmf.org</span> to receive your tax receipt.
+                <span className={styles.emailHighlight}>jadhav_kl@yahoo.co.in</span> to receive your tax receipt.
               </p>
             </div>
 
@@ -125,12 +125,6 @@ const Donate = () => {
                 >
                   <Landmark size={18} /> Bank Transfer
                 </button>
-                <button 
-                  className={`${styles.tabBtn} ${activeTab === 'qr' ? styles.activeTab : ''}`}
-                  onClick={() => setActiveTab('qr')}
-                >
-                  <Smartphone size={18} /> UPI / QR Scan
-                </button>
               </div>
 
               {/* TAB CONTENT: BANK */}
@@ -139,7 +133,7 @@ const Donate = () => {
                   <div className={styles.detailRow}>
                     <label>Account Name</label>
                     <div className={styles.copyWrapper}>
-                      <span>NavGurukul Foundation for Social Welfare</span>
+                      <span>Anish Jadhav Memorial Foundation</span>
                       <button onClick={() => handleCopy("NavGurukul Foundation for Social Welfare", "name")}>
                         {copiedField === "name" ? <Check size={16} color="green"/> : <Copy size={16}/>}
                       </button>
@@ -149,7 +143,7 @@ const Donate = () => {
                   <div className={styles.detailRow}>
                     <label>Account Number</label>
                     <div className={styles.copyWrapper}>
-                      <span>1234 5678 9012</span>
+                      <span>02520110052655</span>
                       <button onClick={() => handleCopy("123456789012", "acc")}>
                         {copiedField === "acc" ? <Check size={16} color="green"/> : <Copy size={16}/>}
                       </button>
@@ -159,7 +153,7 @@ const Donate = () => {
                   <div className={styles.detailRow}>
                     <label>IFSC Code</label>
                     <div className={styles.copyWrapper}>
-                      <span>HDFC0001234</span>
+                      <span>UCBA0000252</span>
                       <button onClick={() => handleCopy("HDFC0001234", "ifsc")}>
                         {copiedField === "ifsc" ? <Check size={16} color="green"/> : <Copy size={16}/>}
                       </button>
@@ -168,33 +162,12 @@ const Donate = () => {
 
                   <div className={styles.detailRow}>
                     <label>Bank Name</label>
-                    <div className={styles.staticValue}>HDFC Bank, Pune Branch</div>
+                    <div className={styles.staticValue}>UCO Bank
+Branch :Yerwada, Pune, Maharashtra</div>
                   </div>
                 </div>
               )}
 
-              {/* TAB CONTENT: QR */}
-              {activeTab === 'qr' && (
-                <div className={`${styles.tabContent} ${styles.qrContent}`}>
-                  <div className={styles.qrWrapper}>
-                    <img src={qrPlaceholder} alt="Donate QR Code" className={styles.qrImage} />
-                  </div>
-                  <p className={styles.qrInstruction}>
-                    Scan with GPay, PhonePe, Paytm, or any UPI app
-                  </p>
-                  <div className={styles.upiIdBox}>
-                    <span>donate@ajmf.upi</span> 
-                    <button onClick={() => handleCopy("donate@ajmf.upi", "upi")}>
-                        {copiedField === "upi" ? <Check size={16} color="green"/> : <Copy size={16}/>}
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              <div className={styles.cardFooter}>
-                <AlertCircle size={16} className={styles.alertIcon} />
-                <p>Please share a screenshot of the payment to <strong>+91 12345 67890</strong> or email us.</p>
-              </div>
 
             </div>
           </motion.div>

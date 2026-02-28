@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --color-primary: #124b33;
   --color-secondary: #d1a33a;
   --color-accent-light: #1a6245;
@@ -469,4 +469,144 @@
     .activityContent {
       padding: 2.5rem;
     }
-  }
+  } */
+
+
+
+  :root {
+    --deep-blue: #112B68;
+    --gold: #ff9100;
+    --white-bg: #fcf8f2;
+    --light-blue: #f4f8ff;
+    --text-grey: #444;
+}
+
+.pageContainer {
+    width: 100%;
+    background-color: var(--white-bg);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HERO SECTION --- */
+.heroSection {
+    background-color: var(--deep-blue);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.heroTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.heroAccentLine {
+    width: 80px;
+    height: 4px;
+    background-color: var(--gold);
+    margin: 0 auto 30px auto;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- FACILITIES SECTION --- */
+.facilitiesSection {
+    padding: 80px 0;
+    background-color: var(--white-bg);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionHeading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.sectionDesc {
+    font-size: 1.1rem;
+    color: var(--text-grey);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- GRID --- */
+.facilitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.facilityCard {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.facilityIconWrapper {
+    width: 60px;
+    height: 60px;
+    background-color: var(--deep-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(17, 43, 104, 0.3);
+}
+
+.facilityIcon {
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+.facilityTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.facilityDescription {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .facilitiesGrid {
+        grid-template-columns: 1fr;
+    }
+    .facilityCard {
+        align-items: center;
+        text-align: center;
+    }
+}

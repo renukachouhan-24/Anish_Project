@@ -452,10 +452,33 @@ const VisionAndLegacySection = () => {
                     </h2>
 
                     <p className={styles.visionParagraph}>
-                        The Anish Jadhav Memorial Foundation was born from a profound love and an unwavering commitment to honor the memory of Anish Jadhav. Established by his father, Brigadier Kishor Jadhav, this foundation represents the transformation of personal grief into a powerful force for positive change.
-                    </p>
-                    <p className={styles.visionParagraph}>
-                        Anish was a young man of exceptional character, compassion, and potential. His life, though tragically cut short, left an indelible mark on everyone he encountered. His dreams, his kindness, and his belief in the power of education and opportunity became the cornerstone of what would become this foundation.
+                        Anish
+                        was a bright, compassionate, and multitalented young man whose life, though brief,
+                        continues to inspire many.
+                        Anish studied BBA in Marketing, where he distinguished himself through his
+                        creativity and dedication.. For his final-year project, he authored an in-depth study
+                        titled “Marketing Strategies of Nikon vs Canon”, which was recognized as the
+                        Best Project of the College—a testament to his analytical ability and commitment
+                        to excellence.
+                        Driven by passion and disciplined self-learning, Anish developed professional-level
+                        expertise in photography, mastering both technical and creative aspects of the
+                        craft. His strong communication skills, humility, and eagerness to help others made
+                        him stand out among his peers.
+                        Recognizing his talent, Nikon India Ltd. selected Anish to join their Core Technical
+                        Team—a prestigious position typically reserved for Film Institute and Television
+                        graduates with advanced training in cinematography, editing, and professional
+                        software. In this role, Anish contributed to:
+                         Conducting workshops for amateur photographers across India
+                         Demonstrating and training users on Nikon’s latest camera technologies
+                         Supporting marketing promotions and product outreach initiatives
+                        His selection reflected not only his technical competence but also his interpersonal
+                        warmth, professionalism, and ability to connect with people from all walks of life.
+                        Beyond photography, Anish had a deep love for music and enjoyed playing the
+                        guitar. His friendly, outgoing nature and genuine care for others earned him a wide
+                        circle of friends who cherished his presence, humour, and kindness.
+                        We remember the dreams he carried, the kindness he shared, and the light he
+                        brought into our lives. Losing him at just twentyfive left a void that words can never
+                        fully express. Yet even in his absence, his spirit guides us every day.
                     </p>
 
                     <div className={styles.visionPartnershipCTA}>
@@ -476,7 +499,12 @@ const VisionAndLegacySection = () => {
                         </motion.div>
                         <h3 className={styles.legacyBoxTitle}>His Legacy Lives On</h3>
                         <p className={styles.legacyBoxText}>
-                            Every student we educate, every life we transform, every dream we help realize is a tribute to Anish Jadhav. His spirit lives on in the determination of our students.
+                            Through the Anish Jadhav Memorial Foundation, we honour his memory by carrying
+                            forward the values he lived by—compassion, creativity, dedication, and the belief
+                            that every young person deserves a chance to grow.
+                            We remember Anish.
+                            We cherish him.
+                            And through our work, we keep his light alive.
                         </p>
                     </MotionDiv>
 
@@ -515,7 +543,8 @@ const AboutAnish = () => {
 
                             <MotionDiv variants={itemVariants}>
                                 <p className={styles.heroSubtitle}>
-                                    Anish Jadhav was more than a beloved son—he was a light in the lives of all who knew him. His spirit, warmth, and dreams continue to inspire the mission of this foundation.
+                                    The Anish Jadhav Memorial Foundation (AJMF) was established in loving
+                                    memory of Anish, the beloved son of Brigadier Kishor and Mrs. Neeta Jadhav
                                 </p>
                             </MotionDiv>
                         </MotionDiv>
