@@ -341,12 +341,10 @@
 
 
 
-
-
 :root {
     --primary-blue: #003674;
     --secondary-orange: #ff6a00;
-    --background-white: #ffffff; /* White background for the collage area */
+    --background-white: #ffffff;
     --text-dark: #333333;
     --border-purple: #c3b4e8; 
 }
@@ -355,18 +353,14 @@
 .heroSection {
     position: relative;
     width: 100%;
-    /* height: 800%; */
-    min-height: 600px;
-     
-    background-color: #f0f0f0; /* White background for the entire section */
+    min-height: 600px;   
+    background-color: #f0f0f0; 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-    /* Subtle purple border on the outer edge is often on the body/main page container */
      overflow: hidden;
 }
 
  
 
-/* --- heroContentWrapper: Ensures content is within a max-width and centered --- */
 .heroContentWrapper {
     position: relative; 
     z-index: 2; 
@@ -375,10 +369,9 @@
     padding:  40px; 
 }
 
-/* --- heroGrid: The two-column layout for text and images --- */
+
 .heroGrid {
     display: grid;
-    /* padding-top: 100px; */
     grid-template-columns: 1fr 1fr; /* Equal columns look closest to the screenshot */
     gap: 20px; 
     background-color: #f0f0f0;
@@ -526,15 +519,11 @@
     }
     .imageWrapper1 { width: 80%; height: 80%; top: 5%; }
     .imageWrapper2 { width: 65%; height: 65%; top: 35%; left: 5%; }
-    .imageWrapper3 { display: none; } /* Hide the third image on small screens */
-    .quarterCircle { display: none; } /* Hide complex design elements on small screens */
+    .imageWrapper3 { display: none; } 
+    .quarterCircle { display: none; }
 }
 
 
-
-
-
- 
  
 .quarterCircle {
     position: absolute;
@@ -542,8 +531,8 @@
     width: 1200px; 
     height: 1200px;
     
-    background-color:  #112B68; /* Dark blue color */
-    z-index: 5; /* Ensures it overlaps the images */
+    background-color:  #112B68;
+    z-index: 5; 
     
    
     top: 60%; 
@@ -553,7 +542,7 @@
     left: 150px;
 }
 
-/* --- Responsive Adjustments (Ensure it shrinks on mobile) --- */
+
 @media (max-width: 768px) {
     .quarterCircle {
         width: 80px; 
@@ -561,5 +550,51 @@
         top: 65%;
         left: 5%;
         z-index: 5;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .heroImageCollage {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .imageWrapper1,
+    .imageWrapper2,
+    .imageWrapper3 {
+        position: relative;   /* absolute hata diya */
+        width: 85%;
+        height: auto;
+        transform: none;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        opacity: 1;
+    }
+
+    .heroImageCollage img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .imageWrapper3 {
+        display: block;  /* third image bhi dikhe */
+    }
+
+    .quarterCircle {
+        display: none;  /* design element hide kar do mobile me */
     }
 }
