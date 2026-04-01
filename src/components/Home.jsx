@@ -1,13 +1,11 @@
-
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, BookOpen } from 'lucide-react'; // Icons for beneficiaries
 import styles from './Home.module.css';
 
 // Images
-import campusImg4 from '../assets/Study Time.jpg'; 
-import FoundationImage from '../assets/AJMF_0324.jpg'; 
+import campusImg4 from '../assets/Study Time.jpg';
+import FoundationImage from '../assets/AJMF_0324.jpg';
 import BrigadierJadhav from '../assets/campus.png'; // Using the image you used in QuoteSection
 
 const baseVariants = {
@@ -19,7 +17,7 @@ const staggerContainer = {
     visible: { transition: { staggerChildren: 0.2 } }
 };
 
-// --- 1. HERO SECTION (Unchanged) ---
+
 const HeroSection = () => {
     return (
         <motion.section
@@ -37,13 +35,6 @@ const HeroSection = () => {
                     TORCH BEARER FOR THE NEEDY
                 </motion.p>
 
-                <motion.div className={styles.modernAuthorInfo} variants={baseVariants}>
-                    <img src={FoundationImage} alt="Brigadier (Dr) Kishor Jadhav" className={styles.modernAuthorImage} />
-                    <div className={styles.modernAuthorText}>
-                        <p className={styles.modernAuthorName}>Brigadier (Dr) Kishor Jadhav, Ph D</p>
-                        <p className={styles.modernAuthorTitle}>Founder of Anish Jadhav Memorial Foundation</p>
-                    </div>
-                </motion.div>
             </div>
             <div className={styles.modernHeroImageContainer}>
                 <img src={campusImg4} alt="Team" className={styles.modernHeroImage} />
@@ -58,7 +49,7 @@ const FoundationStorySection = () => {
         <section className={styles.storySection}>
             <div className={styles.storyContainer}>
                 {/* Left: Text Content */}
-                <motion.div 
+                <motion.div
                     className={styles.storyContent}
                     initial="hidden"
                     whileInView="visible"
@@ -69,14 +60,14 @@ const FoundationStorySection = () => {
                         The Story Behind the Foundation
                     </motion.h2>
                     <motion.div className={styles.storyDivider} variants={baseVariants}></motion.div>
-                    
+
                     <motion.p className={styles.storyText} variants={baseVariants}>
                         The <strong>Anish Jadhav Memorial Foundation (AJMF)</strong> is a non-profit NGO established
                         in memory of <strong>Anish Jadhav</strong>, the only child of Brigadier Kishor and Mrs. Neeta Jadhav.
                         Anish worked with Nikon India’s Core Technical Team before his untimely passing.
                     </motion.p>
                     <motion.p className={styles.storyText} variants={baseVariants}>
-                        AJMF, registered under the Bombay Public Trust Act of 1950, is dedicated to providing
+                        AJMF, registered under the Bombay Public Trust Act of 1950 on 10 August 2018, is dedicated to providing
                         skills training to the underprivileged across India.
                     </motion.p>
 
@@ -88,7 +79,7 @@ const FoundationStorySection = () => {
                 </motion.div>
 
                 {/* Right: Image Decoration */}
-                <motion.div 
+                <motion.div
                     className={styles.storyImageWrapper}
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -108,10 +99,10 @@ const CurrentProjectSection = () => {
     return (
         <section className={styles.impactSection}>
             <div className={styles.impactOverlay}></div> {/* Dark overlay for text pop */}
-            
+
             <div className={styles.impactContainer}>
                 {/* Main Collaboration Statement */}
-                <motion.div 
+                <motion.div
                     className={styles.impactHeader}
                     initial="hidden"
                     whileInView="visible"
@@ -120,7 +111,7 @@ const CurrentProjectSection = () => {
                 >
                     <span className={styles.tagline}>CURRENT PROJECT</span>
                     <h2 className={styles.impactStatement}>
-                        Collaborating with <span className={styles.highlightGold}>NavGurukul Foundation</span> to provide 
+                        Collaborating with <span className={styles.highlightGold}>NavGurukul Foundation</span> to provide
                         <span className={styles.highlightWhite}> FREE residential education</span> in Software Engineering & Digital Marketing.
                     </h2>
                     <p className={styles.impactSubText}>
@@ -131,10 +122,10 @@ const CurrentProjectSection = () => {
                 {/* Target Beneficiaries - Cards Design */}
                 <div className={styles.beneficiariesWrapper}>
                     <h3 className={styles.beneTitle}>Target Beneficiaries</h3>
-                    
+
                     <div className={styles.beneGrid}>
                         {/* Card 1 */}
-                        <motion.div 
+                        <motion.div
                             className={styles.beneCard}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +138,7 @@ const CurrentProjectSection = () => {
                         </motion.div>
 
                         {/* Card 2 */}
-                        <motion.div 
+                        <motion.div
                             className={styles.beneCard}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +151,7 @@ const CurrentProjectSection = () => {
                         </motion.div>
 
                         {/* Card 3 */}
-                        <motion.div 
+                        <motion.div
                             className={styles.beneCard}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
